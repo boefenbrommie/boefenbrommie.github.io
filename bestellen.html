@@ -160,3 +160,16 @@
   </div>
 </body>
 </html>
+
+<form id="bestelForm">
+  <!-- je velden hier -->
+  <button type="submit">Verstuur</button>
+</form>
+
+<script>
+document.getElementById('bestelForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // voorkomt dat het formulier probeert te submitten
+  window.location.href = 'bedankt.html'; // redirect naar bedankpagina
+});
+</script>
+

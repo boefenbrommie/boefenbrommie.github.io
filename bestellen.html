@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Boef & Brommie – Bestellen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Anton', sans-serif;
+      color: #0179F1;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-family: 'Lobster Two', cursive;
+      color: #67bed9;
+      margin: 0 0 30px 0;
+      font-size: 1.8em;
+    }
+
+    /* Blikvanger / bestelblok boven formulier */
+    .highlight {
+      display: flex;
+      flex-direction: column; /* stapelt boven elkaar */
+      align-items: center;
+      gap: 20px;
+      background: #C9E4FF;
+      border: 2px solid #0179F1;
+      border-radius: 12px;
+      padding: 30px;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    /* Afbeelding van het boek */
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .image-container img {
+      width: 180px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Boek info onder afbeelding */
+    .book-info {
+      font-size: 1.05em;
+      color: #000;
+      text-align: center;
+    }
+
+    .book-info p {
+      margin: 4px 0;
+    }
+
+    /* Formulierpaneel over volledige breedte */
+    .form-container {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    .form-container iframe {
+      width: 100%;
+      height: 1900px;
+      border: none;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #666;
+    }
+.order-header {
+  background: #C9E4FF;
+  border: 2px solid #0179F1;
+  border-radius: 14px;
+  padding: 22px 20px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.order-header h1 {
+  margin: 0 0 6px 0;
+  font-family: 'Anton', sans-serif;
+  color: #0179F1;
+}
+
+.order-header .subtitle {
+  margin: 0;
+  font-family: 'Lobster Two', cursive;
+  color: #67bed9;
+  font-size: 1.8em;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+ <div class="order-header">
+  <h1>Boef & Brommie: Slagerij op stelten</h1>
+  <p class="subtitle">Vul je gegevens in om het boek te bestellen</p>
+</div>
+
+    <div class="highlight">
+      <!-- Afbeelding + boekinfo boven formulier -->
+      <div class="image-container">
+        <img src="kaftdef.jpg" alt="Boef & Brommie – boekcover">
+
+        <div class="book-info">
+          <p><strong>Hardcover boek</strong></p>
+          <p>Prijs: €19,95</p>
+          <p>Ophalen: gratis<br>
+             Verzenden: €5,95</p>
+        </div>
+      </div>
+
+      <!-- Formulier -->
+      <div class="form-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfbS0c8QhGNGqBLBGICpKwhzEd6uoETc55TLcxjGeLRIDBg9A/viewform?embedded=true" width="640" height="1871" frameborder="0" marginheight="0" marginwidth="0">Laden…</iframe>
+          Laden…
+        </iframe>
+      </div>
+
+    </div>
+
+    <footer>
+      <p>© Boef & Brommie – koopboefenbrommie.nl</p>
+    </footer>
+
+  </div>
+</body>
+</html>

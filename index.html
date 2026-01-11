@@ -73,6 +73,29 @@
       font-size: 0.9em;
       color: #666;
     }
+@media (max-width: 480px) {
+  .characters {
+    gap: 12px;
+  }
+
+  .characters img {
+    width: 165px;
+  }
+}
+footer p {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  footer p {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
   </style>
 </head>
 
@@ -91,9 +114,13 @@
     <p class="date">Verschijnt op 1 april 2026</p>
     <p class="preorder">Pre-order vanaf maart 2026</p>
 
-    <footer>
-      <p>© Boef & Brommie – koopboefenbrommie.nl - bestelboefenbrommie.nl</p>
-    </footer>
+<footer>
+  <p>
+    <span>© Boef & Brommie</span>
+    <span>koopboefenbrommie.nl</span>
+    <span>bestelboefenbrommie.nl</span>
+  </p>
+</footer>
 
   </div>
 

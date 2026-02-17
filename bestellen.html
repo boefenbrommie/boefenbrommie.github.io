@@ -11,6 +11,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CGG9GV25Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9CGG9GV25Y');
+</script>
+
   <style>
     body { font-family: Arial, sans-serif; background: #f7f7f7; margin: 0; padding: 0; color: #333; }
     .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; background: #fff; text-align: center; }
@@ -19,6 +29,13 @@
     .highlight { display: flex; flex-direction: column; align-items: center; gap: 20px; background: #C9E4FF; border: 2px solid #0179F1; border-radius: 12px; padding: 30px; margin-top: 50px; text-align: center; }
     .image-container { display: flex; flex-direction: column; align-items: center; gap: 15px; }
     .image-container img { width: 180px; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.image-container a img:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s ease;
+}
+.image-container a img {
+  cursor: pointer;
+}
     .book-info { font-size: 1.05em; color: #000; text-align: center; }
     .book-info p { margin: 4px 0; }
     form { width: 100%; max-width: 600px; display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
@@ -43,7 +60,13 @@
 
     <div class="highlight">
       <div class="image-container">
-        <img src="kaftdef.jpg" alt="Boef & Brommie – boekcover">
+<a href="flaptekst.html" style="display:inline-block;">
+  <img src="kaftdef.jpg" alt="Boef & Brommie – boekcover">
+</a>
+<p style="margin-top:10px; font-size:0.95em; color:#015ec7;">
+  Tip: klik op de kaft om de flaptekst te lezen.
+</p>
+
         <div class="book-info">
           <p><strong>Hardcover boek</strong></p>
           <p>Prijs: €19,95</p>
@@ -103,7 +126,7 @@
     </div>
 
     <footer>
-      <p>© Boef & Brommie – koopboefenbrommie.nl</p>
+      <p>© Boef & Brommie – bestelboefenbrommie.nl – koopboefenbrommie.nl</p>
     </footer>
 
   </div>

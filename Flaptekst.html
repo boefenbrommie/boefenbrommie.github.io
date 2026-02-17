@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Boef & Brommie: Slagerij op stelten – Flaptekst</title>
+  <title>Boef & Brommie – Slagerij op stelten</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" href="favicon.png">
@@ -10,15 +10,6 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9CGG9GV25Y"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-9CGG9GV25Y');
-  </script>
 
   <style>
     body {
@@ -29,7 +20,7 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 50px 20px;
       background: #fff;
@@ -40,99 +31,136 @@
       color: #0179F1;
       text-align: center;
       font-size: 2.6em;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
 
-    .box {
+    .flap-box {
       background: #C9E4FF;
       border: 2px solid #0179F1;
       border-radius: 16px;
-      padding: 28px 24px;
-      max-width: 820px;
-      margin: 0 auto;
-    }
-
-    .box p {
-      margin: 0 0 16px 0;
-      line-height: 1.55;
+      padding: 35px;
       font-size: 1.05em;
+      line-height: 1.6;
     }
 
-    .box ul {
-      margin: 10px 0 20px 20px;
+    /* LOGO TUSSEN DE TEKST */
+    .inline-logo {
+      float: right;
+      width: 190px;
+      margin: -20px 0 15px 30px;
     }
 
-    .box li {
-      margin: 8px 0;
+    .inline-logo img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
-    .cta {
+    ul {
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .slotzin {
+      font-weight: bold;
       text-align: center;
-      margin-top: 26px;
+      margin-top: 25px;
+      clear: both;
     }
 
-    .cta a {
+    .bestel-knop {
       display: inline-block;
-      padding: 14px 30px;
+      margin: 30px auto 0;
+      padding: 14px 34px;
       background: #0179F1;
       color: #fff;
       text-decoration: none;
-      border-radius: 12px;
+      border-radius: 8px;
       font-family: 'Lobster Two', cursive;
-      font-size: 1.35em;
-      transition: background 0.2s ease;
-    }
-
-    .cta a:hover {
-      background: #005fc4;
+      font-size: 1.3em;
     }
 
     footer {
-      margin-top: 40px;
+      margin-top: 50px;
       font-size: 0.9em;
       color: #666;
       text-align: center;
     }
-.flap-slotzin {
-  text-align: center;
-  margin-top: 30px;
-  font-weight: bold;
-}
+
+    /* 📱 Mobiel: logo niet floaten */
+    @media (max-width: 768px) {
+      .inline-logo {
+        float: none;
+        margin: 0 auto 20px;
+        display: block;
+      }
+
+      h1 {
+        font-size: 2.1em;
+      }
+    }
   </style>
 </head>
 
 <body>
+
   <div class="container">
 
     <h1>Boef & Brommie: Slagerij op stelten</h1>
 
-    <div class="box">
-      <p>Boef en Brommie wonen in Sufferingren. Dat lijkt een suf dorpje, maar schijn bedriegt! Knauwbessen eten suikerhoningknollen en worden opgegeten door salamikevers. De salamikevers poepen vervolgens weer verse salami uit. Voor Boef, de grootste salamiliefhebber ter wereld, is dat geweldig nieuws.</p>
+    <div class="flap-box">
 
-      <p>Maar als zijn vader besluit dat de slagerij onmiddellijk moet sluiten, omdat hij zijn belangrijke tekeningen kwijt is, verandert alles. Maar dit zaakje lijkt te stinken!</p>
+      <p>
+        Boef en Brommie wonen in Sufferingren. Dat lijkt een suf dorpje, maar schijn bedriegt!
+        Knauwbeesten eten suikerhoningknollen en worden opgegeten door salamikevers.
+        De salamikevers poepen vervolgens weer verse salami uit.
+        Voor Boef, de grootste salamiliefhebber ter wereld, is dat geweldig nieuws.
+      </p>
+
+      <!-- LOGO OP DE JUISTE PLEK -->
+      <div class="inline-logo">
+        <img src="logo-bb.png" alt="Boef & Brommie logo">
+      </div>
+
+      <p>
+        Maar als zijn vader besluit dat de slagerij onmiddellijk moet sluiten,
+        omdat hij zijn belangrijke tekeningen kwijt is, verandert alles.
+        Maar dit zaakje lijkt te stinken!
+      </p>
 
       <ul>
         <li>Waarom geeft de burgemeester de slager de schuld?</li>
-        <li>Wat hebben de knauwbessen ermee te maken?</li>
+        <li>Wat hebben de knauwbeesten ermee te maken?</li>
         <li>Waarom gedraagt de slager zich plotseling zo vreemd?</li>
       </ul>
 
-      <p>Samen met Brommie duikt Boef in een wervelstorm van gekke ontdekkingen, knotsgek gevaar en hilarische plotwendingen. Terwijl Sufferingren steeds chaotischer wordt, moet Boef niet één maar twee dingen redden: de waarheid én zijn geliefde salami.</p>
+      <p>
+        Samen met Brommie duikt Boef in een wervelstorm van gekke ontdekkingen,
+        knotsgek gevaar en hilarische plotwendingen.
+        Terwijl Sufferingren steeds chaotischer wordt,
+        moet Boef niet één maar twee dingen redden:
+        de waarheid én zijn geliefde salami.
+      </p>
 
-<p class="flap-slotzin">
-Een razendsnel en doldwaas avontuur vol humor, spanning en verrassingen!
-</p>
+      <p class="slotzin">
+        Een razendsnel en doldwaas avontuur vol humor, spanning en verrassingen!
+      </p>
 
-
-      <div class="cta">
-        <a href="bestellen.html#bestelformulier">Nu bestellen</a>
+      <div style="text-align:center;">
+        <a href="bestellen.html" class="bestel-knop">Nu bestellen</a>
       </div>
+
     </div>
 
     <footer>
-      <p>© Boef & Brommie – bestelboefenbrommie.nl – koopboefenbrommie.nl</p>
+      © Boef & Brommie – bestelboefenbrommie.nl – koopboefenbrommie.nl
     </footer>
 
   </div>
+
 </body>
 </html>

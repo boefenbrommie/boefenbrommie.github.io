@@ -5,48 +5,184 @@
   <title>Boef & Brommie – Bestellen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CGG9GV25Y"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9CGG9GV25Y');
-</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9CGG9GV25Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9CGG9GV25Y');
+  </script>
 
   <style>
-    body { font-family: Arial, sans-serif; background: #f7f7f7; margin: 0; padding: 0; color: #333; }
-    .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; background: #fff; text-align: center; }
-    h1 { font-family: 'Anton', sans-serif; color: #0179F1; margin-bottom: 10px; }
-    .subtitle { font-family: 'Lobster Two', cursive; color: #67bed9; margin: 0 0 30px 0; font-size: 1.8em; }
-    .highlight { display: flex; flex-direction: column; align-items: center; gap: 20px; background: #C9E4FF; border: 2px solid #0179F1; border-radius: 12px; padding: 30px; margin-top: 50px; text-align: center; }
-    .image-container { display: flex; flex-direction: column; align-items: center; gap: 15px; }
-    .image-container img { width: 180px; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-.image-container a img:hover {
-  transform: scale(1.03);
-  transition: transform 0.2s ease;
-}
-.image-container a img {
-  cursor: pointer;
-}
-    .book-info { font-size: 1.05em; color: #000; text-align: center; }
-    .book-info p { margin: 4px 0; }
-    form { width: 100%; max-width: 600px; display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
-    input, textarea, select, button { padding: 10px; font-size: 1em; border-radius: 5px; border: 1px solid #ccc; width: 100%; box-sizing: border-box; }
-    button { background: #0179F1; color: #fff; font-weight: bold; border: none; cursor: pointer; transition: background 0.3s; }
-    button:hover { background: #015ec7; }
-    .radio-group { display: flex; gap: 20px; justify-content: center; margin-top: 10px; }
-    footer { margin-top: 40px; font-size: 0.9em; color: #666; }
-    .order-header { background: #C9E4FF; border: 2px solid #0179F1; border-radius: 14px; padding: 22px 20px; margin-bottom: 35px; text-align: center; }
-    .order-header h1 { margin: 0 0 6px 0; font-family: 'Anton', sans-serif; color: #0179F1; }
-    .order-header .subtitle { margin: 0; font-family: 'Lobster Two', cursive; color: #61acfb; font-size: 1.8em; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Anton', sans-serif;
+      color: #0179F1;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-family: 'Lobster Two', cursive;
+      color: #61acfb;
+      margin: 0;
+      font-size: 1.8em;
+    }
+
+    .order-header {
+      background: #C9E4FF;
+      border: 2px solid #0179F1;
+      border-radius: 14px;
+      padding: 22px 20px;
+      margin-bottom: 35px;
+    }
+
+    .highlight {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      background: #C9E4FF;
+      border: 2px solid #0179F1;
+      border-radius: 12px;
+      padding: 30px;
+      margin-top: 50px;
+    }
+
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .image-container img {
+      width: 180px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.03);
+    }
+
+    .book-info {
+      font-size: 1.05em;
+      color: #000;
+    }
+
+    .book-info p {
+      margin: 4px 0;
+    }
+
+    form {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    input,
+    textarea,
+    select,
+    button {
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    form label {
+      text-align: left;
+      font-weight: bold;
+    }
+
+    /* Alleen voor "Aantal boeken" */
+    .center-label {
+      text-align: center;
+      display: block;
+    }
+
+    button {
+      background: #0179F1;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #015ec7;
+    }
+
+    /* Legends */
+    form legend {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 6px;
+      padding: 0;
+    }
+
+    /* Radio-groepen: bolletjes exact onder elkaar */
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 6px auto 18px;
+      width: fit-content;
+    }
+
+    .radio-group label {
+      display: grid;
+      grid-template-columns: 20px auto;
+      align-items: center;
+      column-gap: 8px;
+      font-weight: normal;
+      cursor: pointer;
+      margin: 6px 0;
+      white-space: nowrap;
+    }
+
+    .radio-group input[type="radio"] {
+      margin: 0;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #666;
+    }
   </style>
 </head>
 
@@ -59,13 +195,14 @@
     </div>
 
     <div class="highlight">
+
       <div class="image-container">
-<a href="flaptekst.html" style="display:inline-block;">
-  <img src="kaftdef.jpg" alt="Boef & Brommie – boekcover">
-</a>
-<p style="margin-top:10px; font-size:0.95em; color:#015ec7;">
-  Tip: klik op de kaft om de flaptekst te lezen.
-</p>
+        <a href="flaptekst.html">
+          <img src="kaftdef.jpg" alt="Boef & Brommie – boekcover">
+        </a>
+        <p style="font-size:0.95em; color:#015ec7;">
+          Tip: klik op de kaft om de flaptekst te lezen.
+        </p>
 
         <div class="book-info">
           <p><strong>Hardcover boek</strong></p>
@@ -74,8 +211,9 @@
         </div>
       </div>
 
-      <!-- Formulier via Formspree -->
+      <!-- Formulier -->
       <form action="https://formspree.io/f/xykzrdzl" method="POST" id="bestelForm">
+
         <input type="text" name="Naam" placeholder="Naam" required>
         <input type="text" name="Adres" placeholder="Adres" required>
         <input type="text" name="Postcode" placeholder="Postcode" required>
@@ -83,7 +221,7 @@
         <input type="tel" name="Telefoonnummer" placeholder="Telefoonnummer (voor betaalverzoek)" required>
         <input type="email" name="E-mail" placeholder="E-mailadres" required>
 
-        <label for="Aantal">Aantal boeken</label>
+        <label for="Aantal" class="center-label">Aantal boeken</label>
         <select name="Aantal" id="Aantal" required>
           <option value="">Kies aantal</option>
           <option value="1">1</option>
@@ -98,10 +236,16 @@
           <option value="Anders">Anders (vul aantal in bij opmerkingen)</option>
         </select>
 
-        <label>Ophalen of verzenden</label>
+        <legend><strong>Ophalen of verzenden</strong></legend>
         <div class="radio-group">
           <label><input type="radio" name="Verzendoptie" value="Ophalen" required> Ophalen (gratis)</label>
-          <label><input type="radio" name="Verzendoptie" value="Verzenden" required> Verzenden (€5,95)</label>
+          <label><input type="radio" name="Verzendoptie" value="Verzenden"> Verzenden (€5,95)</label>
+        </div>
+
+        <legend><strong>Kies betaalmethode</strong></legend>
+        <div class="radio-group">
+          <label><input type="radio" name="betaalmethode" value="Betaalverzoek via WhatsApp" required> Betaalverzoek via WhatsApp</label>
+          <label><input type="radio" name="betaalmethode" value="Overschrijven via de bank"> Overschrijven via de bank</label>
         </div>
 
         <textarea name="Opmerkingen" placeholder="Extra opmerkingen (optioneel)"></textarea>
@@ -123,6 +267,7 @@
           });
         });
       </script>
+
     </div>
 
     <footer>

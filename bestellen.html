@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Boef & Brommie – Bestellen</title>
+  <title>Boef & Brommie – Pre-order</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Favicon -->
@@ -36,6 +36,7 @@
       padding: 40px 20px;
       background: #fff;
       text-align: center;
+      box-sizing: border-box;
     }
 
     h1 {
@@ -68,7 +69,7 @@
       border: 2px solid #0179F1;
       border-radius: 12px;
       padding: 30px;
-      margin-top: 50px;
+      margin-top: 10px;
     }
 
     .image-container {
@@ -88,6 +89,12 @@
 
     .image-container img:hover {
       transform: scale(1.03);
+    }
+
+    .flap-link {
+      font-size: 0.95em;
+      color: #015ec7;
+      margin: 0;
     }
 
     .book-info {
@@ -125,7 +132,6 @@
       font-weight: bold;
     }
 
-    /* Alleen voor "Aantal boeken" */
     .center-label {
       text-align: center;
       display: block;
@@ -144,7 +150,6 @@
       background: #015ec7;
     }
 
-    /* Legends */
     form legend {
       display: block;
       width: 100%;
@@ -152,9 +157,9 @@
       margin-top: 20px;
       margin-bottom: 6px;
       padding: 0;
+      font-weight: bold;
     }
 
-    /* Radio-groepen: bolletjes exact onder elkaar */
     .radio-group {
       display: flex;
       flex-direction: column;
@@ -176,12 +181,35 @@
 
     .radio-group input[type="radio"] {
       margin: 0;
+      width: auto;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 28px;
+      color: #0179F1;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
     }
 
     footer {
       margin-top: 40px;
       font-size: 0.9em;
       color: #666;
+    }
+
+    @media (max-width: 560px) {
+      .subtitle {
+        font-size: 1.5em;
+      }
+
+      .radio-group label {
+        white-space: normal;
+      }
     }
   </style>
 </head>
@@ -191,7 +219,7 @@
 
     <div class="order-header">
       <h1>Boef & Brommie: Slagerij op stelten</h1>
-      <p class="subtitle">Vul je gegevens in om het boek te bestellen</p>
+      <p class="subtitle">Pre-order nu jouw exemplaar</p>
     </div>
 
     <div class="highlight">
@@ -200,9 +228,7 @@
         <a href="flaptekst.html">
           <img src="kaftdef.jpg" alt="Boef & Brommie – boekcover">
         </a>
-        <p style="font-size:0.95em; color:#015ec7;">
-          klik op de kaft om de flaptekst te lezen.
-        </p>
+        <p class="flap-link">klik op de kaft om de flaptekst te lezen.</p>
 
         <div class="book-info">
           <p><strong>Hardcover boek</strong></p>
@@ -211,9 +237,7 @@
         </div>
       </div>
 
-      <!-- Formulier -->
       <form action="https://formspree.io/f/xykzrdzl" method="POST" id="bestelForm">
-
         <input type="text" name="Naam" placeholder="Naam" required>
         <input type="text" name="Adres" placeholder="Adres" required>
         <input type="text" name="Postcode" placeholder="Postcode" required>
@@ -236,13 +260,13 @@
           <option value="Anders">Anders (vul aantal in bij opmerkingen)</option>
         </select>
 
-        <legend><strong>Ophalen of verzenden</strong></legend>
+        <legend>Ophalen of verzenden</legend>
         <div class="radio-group">
           <label><input type="radio" name="Verzendoptie" value="Ophalen" required> Ophalen (gratis)</label>
           <label><input type="radio" name="Verzendoptie" value="Verzenden"> Verzenden (€5,95)</label>
         </div>
 
-        <legend><strong>Kies betaalmethode</strong></legend>
+        <legend>Kies betaalmethode</legend>
         <div class="radio-group">
           <label><input type="radio" name="betaalmethode" value="Betaalverzoek via WhatsApp" required> Betaalverzoek via WhatsApp</label>
           <label><input type="radio" name="betaalmethode" value="Overschrijven via de bank"> Overschrijven via de bank</label>
@@ -250,30 +274,32 @@
 
         <textarea name="Opmerkingen" placeholder="Extra opmerkingen (optioneel)"></textarea>
 
-        <button type="submit">Verstuur bestelling</button>
+        <button type="submit">Verstuur pre-order</button>
       </form>
 
-      <script>
-        document.getElementById('bestelForm').addEventListener('submit', function(e) {
-          e.preventDefault();
-          fetch(this.action, {
-            method: this.method,
-            body: new FormData(this),
-            headers: { 'Accept': 'application/json' }
-          }).then(() => {
-            window.location.href = 'bedankt.html';
-          }).catch(() => {
-            alert('Er is iets misgegaan, probeer opnieuw.');
-          });
-        });
-      </script>
-
     </div>
+
+    <a href="index.html" class="back-link">← Terug naar de beginpagina</a>
 
     <footer>
       <p>© Boef & Brommie – bestelboefenbrommie.nl – koopboefenbrommie.nl</p>
     </footer>
 
   </div>
+
+  <script>
+    document.getElementById('bestelForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      fetch(this.action, {
+        method: this.method,
+        body: new FormData(this),
+        headers: { 'Accept': 'application/json' }
+      }).then(() => {
+        window.location.href = 'bedankt.html';
+      }).catch(() => {
+        alert('Er is iets misgegaan, probeer opnieuw.');
+      });
+    });
+  </script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Boef & Brommie – Pre-order</title>
+  <title>Boef & Brommie – Bestellen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Favicon -->
@@ -36,9 +36,59 @@
       padding: 40px 20px;
       background: #fff;
       text-align: center;
-      box-sizing: border-box;
     }
 
+    /* NAVBAR (zelfde als index) */
+    .navbar {
+      background: #0179F1;
+      border-radius: 14px;
+      padding: 14px 20px;
+      margin: 0 auto 14px auto; /* extra ruimte onder de balk */
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-logo img {
+      height: 48px;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05em;
+      padding: 6px 10px;
+      border-radius: 8px;
+      transition: opacity 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-links a:hover { opacity: 0.85; }
+
+    .nav-links a.active {
+      background: #67BED9; /* lichtblauw */
+    }
+
+    @media (max-width: 520px) {
+      .nav-logo img { height: 44px; }
+      .nav-links a { font-size: 1em; }
+    }
+
+    /* Pagina-header */
     h1 {
       font-family: 'Anton', sans-serif;
       color: #0179F1;
@@ -69,7 +119,7 @@
       border: 2px solid #0179F1;
       border-radius: 12px;
       padding: 30px;
-      margin-top: 10px;
+      margin-top: 10px; /* iets rustiger t.o.v. navbar */
     }
 
     .image-container {
@@ -89,12 +139,6 @@
 
     .image-container img:hover {
       transform: scale(1.03);
-    }
-
-    .flap-link {
-      font-size: 0.95em;
-      color: #015ec7;
-      margin: 0;
     }
 
     .book-info {
@@ -132,6 +176,7 @@
       font-weight: bold;
     }
 
+    /* Alleen voor "Aantal boeken" */
     .center-label {
       text-align: center;
       display: block;
@@ -150,6 +195,7 @@
       background: #015ec7;
     }
 
+    /* Legends */
     form legend {
       display: block;
       width: 100%;
@@ -157,9 +203,9 @@
       margin-top: 20px;
       margin-bottom: 6px;
       padding: 0;
-      font-weight: bold;
     }
 
+    /* Radio-groepen: bolletjes exact onder elkaar */
     .radio-group {
       display: flex;
       flex-direction: column;
@@ -181,19 +227,6 @@
 
     .radio-group input[type="radio"] {
       margin: 0;
-      width: auto;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-top: 28px;
-      color: #0179F1;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .back-link:hover {
-      text-decoration: underline;
     }
 
     footer {
@@ -201,25 +234,32 @@
       font-size: 0.9em;
       color: #666;
     }
-
-    @media (max-width: 560px) {
-      .subtitle {
-        font-size: 1.5em;
-      }
-
-      .radio-group label {
-        white-space: normal;
-      }
-    }
   </style>
 </head>
 
 <body>
   <div class="container">
 
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-inner">
+        <div class="nav-logo">
+          <a href="index.html">
+            <img src="logo-bb.png" alt="Boef & Brommie">
+          </a>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Beginpagina</a>
+          <a href="bestellen.html">Bestellen</a>
+          <a href="reviews.html">Reviews</a>
+        </div>
+      </div>
+    </nav>
+
     <div class="order-header">
       <h1>Boef & Brommie: Slagerij op stelten</h1>
-      <p class="subtitle">Pre-order nu jouw exemplaar</p>
+      <p class="subtitle">Vul je gegevens in om het boek te bestellen</p>
     </div>
 
     <div class="highlight">
@@ -228,7 +268,9 @@
         <a href="flaptekst.html">
           <img src="kaftdef.jpg" alt="Boef & Brommie – boekcover">
         </a>
-        <p class="flap-link">klik op de kaft om de flaptekst te lezen</p>
+        <p style="font-size:0.95em; color:#015ec7; margin: 0;">
+          klik op de kaft om de flaptekst te lezen.
+        </p>
 
         <div class="book-info">
           <p><strong>Hardcover boek</strong></p>
@@ -237,6 +279,7 @@
         </div>
       </div>
 
+      <!-- Formulier -->
       <form action="https://formspree.io/f/xykzrdzl" method="POST" id="bestelForm">
         <input type="text" name="Naam" placeholder="Naam" required>
         <input type="text" name="Adres" placeholder="Adres" required>
@@ -260,13 +303,13 @@
           <option value="Anders">Anders (vul aantal in bij opmerkingen)</option>
         </select>
 
-        <legend>Ophalen of verzenden</legend>
+        <legend><strong>Ophalen of verzenden</strong></legend>
         <div class="radio-group">
           <label><input type="radio" name="Verzendoptie" value="Ophalen" required> Ophalen (gratis)</label>
           <label><input type="radio" name="Verzendoptie" value="Verzenden"> Verzenden (€5,95)</label>
         </div>
 
-        <legend>Kies betaalmethode</legend>
+        <legend><strong>Kies betaalmethode</strong></legend>
         <div class="radio-group">
           <label><input type="radio" name="betaalmethode" value="Betaalverzoek via WhatsApp" required> Betaalverzoek via WhatsApp</label>
           <label><input type="radio" name="betaalmethode" value="Overschrijven via de bank"> Overschrijven via de bank</label>
@@ -274,12 +317,25 @@
 
         <textarea name="Opmerkingen" placeholder="Extra opmerkingen (optioneel)"></textarea>
 
-        <button type="submit">Verstuur pre-order</button>
+        <button type="submit">Verstuur bestelling</button>
       </form>
 
-    </div>
+      <script>
+        document.getElementById('bestelForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          fetch(this.action, {
+            method: this.method,
+            body: new FormData(this),
+            headers: { 'Accept': 'application/json' }
+          }).then(() => {
+            window.location.href = 'bedankt.html';
+          }).catch(() => {
+            alert('Er is iets misgegaan, probeer opnieuw.');
+          });
+        });
+      </script>
 
-    <a href="index.html" class="back-link">← Terug naar de beginpagina</a>
+    </div>
 
     <footer>
       <p>© Boef & Brommie – bestelboefenbrommie.nl – koopboefenbrommie.nl</p>
@@ -288,20 +344,19 @@
   </div>
 
   <script>
-    document.getElementById('bestelForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      fetch(this.action, {
-        method: this.method,
-        body: new FormData(this),
-        headers: { 'Accept': 'application/json' }
-      }).then(() => {
-        window.location.href = 'bedankt.html';
-      }).catch(() => {
-        alert('Er is iets misgegaan, probeer opnieuw.');
+    // Automatisch actieve link markeren
+    (function() {
+      const path = window.location.pathname.split('/').pop() || 'index.html';
+      const links = document.querySelectorAll('#navLinks a');
+
+      links.forEach(a => {
+        const href = (a.getAttribute('href') || '').split('/').pop();
+        if (href === path) {
+          a.classList.add('active');
+        }
       });
-    });
+    })();
   </script>
+
 </body>
 </html>
-
-

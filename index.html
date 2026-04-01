@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Boef & Brommie – Binnenkort</title>
+  <title>Boef & Brommie – Slagerij op stelten</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" href="favicon.png">
@@ -11,145 +11,339 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CGG9GV25Y"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9CGG9GV25Y');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9CGG9GV25Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9CGG9GV25Y');
+  </script>
 
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
       background: #f7f7f7;
+      margin: 0;
+      padding: 0;
       color: #333;
     }
 
     .container {
       max-width: 900px;
       margin: 0 auto;
-      padding: 60px 20px;
+      padding: 40px 20px;
       background: #fff;
-      text-align: center;
+      box-sizing: border-box;
     }
 
-    h1 {
-      font-family: 'Anton', sans-serif;
-      color: #0179F1;
-      margin-bottom: 10x;
-      font-size: 2.6em;
-    }
-
-    .subtitle {
-      font-family: 'Lobster Two', cursive;
-      color: #0179F1;
-      font-size: 1.8em;
-      margin-bottom: 40px;
-    }
-
-    .characters {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      gap: 8px;
-      margin-bottom: 40px;
-    }
-
-    .characters img {
-      width: 200px;
-      max-width: 45%;
-    }
-
-    /* Release-tekst */
-    .release-label {
-      font-family: 'Lobster Two', cursive;
-      font-size: 1.5em;
-      color: #0179F1;
-      margin-bottom: 8px; /* dicht bij datum */
-    }
-
-    .release-date {
-      font-family: 'Anton', sans-serif;
-      font-size: 2.3em;
-      color: #0179F1;
-      margin-top: 0;
-      margin-bottom: 22px;
-    }
-
-    .preorder-button {
-      display: inline-block;
-      padding: 14px 32px;
+    /* NAVBAR */
+    .navbar {
       background: #0179F1;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-family: 'Lobster Two', cursive;
-      font-size: 1.3em;
-      transition: background 0.2s ease;
+      border-radius: 14px;
+      padding: 14px 20px;
+      margin: 0 auto 14px auto;
     }
 
-    .preorder-button:hover {
-      background: #005fc4;
-    }
-
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #666;
-    }
-
-    footer p {
+    .nav-inner {
       display: flex;
-      justify-content: center;
-      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
       flex-wrap: wrap;
     }
 
-    @media (max-width: 480px) {
-      .characters img {
-        width: 165px;
-      }
+    .nav-logo img {
+      height: 48px;
+      display: block;
+    }
 
-      footer p {
-        flex-direction: column;
-        gap: 4px;
-      }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05em;
+      padding: 6px 10px;
+      border-radius: 8px;
+      transition: opacity 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.85;
+    }
+
+    .nav-links a.active {
+      background: #67BED9;
+      opacity: 1;
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,0.55);
+    }
+
+    /* Titel */
+    h1 {
+      font-family: 'Anton', sans-serif;
+      color: #0179F1;
+      text-align: center;
+      margin: 0;
+    }
+
+    p {
+      line-height: 1.5;
+      margin: 1em 0;
+    }
+
+    ul {
+      margin: 0.5em 0 1em;
+      padding-left: 20px;
+    }
+
+    .center-text {
+      text-align: center;
+    }
+
+    /* Knoppen */
+    .button {
+      background: #0179F1;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 25px;
+      font-weight: bold;
+      border-radius: 8px;
+      display: inline-block;
+      transition: background 0.2s ease;
+    }
+
+    .button:hover {
+      background: #015ec7;
+    }
+
+    /* Titelkader */
+    .title-box {
+      background: #C9E4FF;
+      border: 2px solid #0179F1;
+      border-radius: 16px;
+      padding: 25px 20px 18px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .title-box .author,
+    .title-box .illustrator {
+      margin: 0;
+      font-family: 'Lobster Two', cursive;
+      color: #61acfb;
+    }
+
+    .title-box .author {
+      font-size: 1.9em;
+    }
+
+    .title-box .illustrator {
+      font-size: 1.2em;
+    }
+
+    /* Bestelblok */
+    .highlight {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      background: #C9E4FF;
+      border: 2px solid #0179F1;
+      border-radius: 16px;
+      padding: 30px;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .highlight img {
+      width: 180px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .highlight p {
+      margin: 0 0 10px;
+      font-size: 1.1em;
+      color: #000;
+    }
+
+    /* Reviews op homepage */
+    .reviews-home {
+      margin-top: 50px;
+      background: #C9E4FF;
+      border: 2px solid #0179F1;
+      border-radius: 16px;
+      padding: 30px 24px;
+      text-align: center;
+    }
+
+    .reviews-home h2 {
+      font-family: 'Anton', sans-serif;
+      color: #0179F1;
+      margin-top: 0;
+      margin-bottom: 24px;
+      font-size: 2em;
+    }
+
+    .review-preview {
+      background: #fff;
+      border: 2px solid rgba(1,121,241,0.2);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      text-align: left;
+    }
+
+    .review-text {
+      margin: 0 0 8px 0;
+      font-size: 1.05em;
+      line-height: 1.5;
+    }
+
+    .review-meta {
+      margin: 0;
+      font-weight: bold;
+      color: #015ec7;
+    }
+
+    .reviews-button {
+      margin-top: 10px;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #666;
+      text-align: center;
+    }
+
+    @media (max-width: 520px) {
+      .nav-logo img { height: 44px; }
+      .nav-links a { font-size: 1em; }
+      .reviews-home h2 { font-size: 1.7em; }
     }
   </style>
 </head>
 
 <body>
-
   <div class="container">
 
-    <h1>Boef & Brommie komen eraan!</h1>
-    <p class="subtitle">Een avontuur vol humor en kattenkwaad</p>
+    <nav class="navbar">
+      <div class="nav-inner">
+        <div class="nav-logo">
+          <a href="index.html">
+            <img src="logo-bb.png" alt="Boef & Brommie">
+          </a>
+        </div>
 
-    <div class="characters">
-      <img src="aboef.png" alt="Boef">
-      <img src="abrommie.png" alt="Brommie">
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Beginpagina</a>
+          <a href="bestellen.html">Bestellen</a>
+          <a href="reviews.html">Reviews</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="title-box">
+      <h1>Boef & Brommie: Slagerij op stelten</h1>
+      <p class="author">Gijs Lanen</p>
+      <p class="illustrator">Tekeningen van Ted Lenssen</p>
     </div>
 
-    <p class="release-label">Verkrijgbaar vanaf:</p>
-    <p class="release-date">1 april 2026</p>
+    <p class="center-text"><strong>Welkom in de wereld van Boef & Brommie!</strong></p>
 
-    <a href="bestellen.html" class="preorder-button">
-      Pre-order nu!
-    </a>
+    <p>
+      Boef en Brommie wonen in Sufferingen. Dat lijkt een suf dorpje, maar schijn bedriegt!
+      Knauwbessen eten suikerhoningknollen en worden opgegeten door salamikevers.
+      De salamikevers poepen vervolgens weer verse salami uit. Voor Boef, de grootste
+      salamiliefhebber ter wereld, is dat geweldig nieuws.
+    </p>
+
+    <p>
+      Maar als zijn vader besluit dat de slagerij onmiddellijk moet sluiten, omdat hij
+      zijn belangrijke tekeningen kwijt is, verandert alles. Maar dit zaakje lijkt te stinken!
+    </p>
+
+    <ul>
+      <li>Waarom geeft de burgemeester de slager de schuld?</li>
+      <li>Wat hebben de knauwbessen ermee te maken?</li>
+      <li>Waarom gedraagt de slager zich plotseling zo vreemd?</li>
+    </ul>
+
+    <p>
+      Samen met Brommie duikt Boef in een wervelstorm van gekke ontdekkingen, knotsgek gevaar
+      en hilarische plotwendingen. Terwijl Sufferingen steeds chaotischer wordt, moet Boef
+      niet één maar twee dingen redden: de waarheid en zijn geliefde salami.
+    </p>
+
+    <p class="center-text">
+      <strong>Een razendsnel en doldwaas avontuur vol humor, spanning en verrassingen!</strong>
+    </p>
+
+    <div class="highlight">
+      <img src="kaftdef.jpg" alt="Boef & Brommie – boekcover">
+      <div>
+        <p>
+          <strong>Hardcover boek</strong><br><br>
+          Prijs: €19,95<br>
+          Ophalen: gratis<br>
+          Verzenden: €5,95
+        </p>
+        <a class="button" href="bestellen.html">Bestel het boek</a>
+      </div>
+    </div>
+
+    <div class="reviews-home">
+      <h2>Wat lezers zeggen</h2>
+
+      <div class="review-preview">
+        <p class="review-text">“We hebben hard gelachen. Lekker vlot en vol gekke wendingen!”</p>
+        <p class="review-meta">Ouder <span>⭐⭐⭐⭐⭐</span></p>
+      </div>
+
+      <div class="review-preview">
+        <p class="review-text">“Ideaal om samen te lezen. Humor én spanning, kinderen willen door!”</p>
+        <p class="review-meta">Ouder <span>⭐⭐⭐⭐</span></p>
+      </div>
+
+      <div class="review-preview">
+        <p class="review-text">“Boef is grappig en ik vond de salamikevers supergoor (maar leuk)!”</p>
+        <p class="review-meta">Kind (10) <span>⭐⭐⭐⭐⭐</span></p>
+      </div>
+
+      <a href="reviews.html" class="button reviews-button">Bekijk meer reviews</a>
+    </div>
 
     <footer>
-      <p>
-        <span>© Boef & Brommie</span>
-        <span>koopboefenbrommie.nl</span>
-        <span>bestelboefenbrommie.nl</span>
-      </p>
+      <p>© Boef & Brommie – koopboefenbrommie.nl - bestelboefenbrommie.nl</p>
     </footer>
 
   </div>
+
+  <script>
+    // Automatisch actieve link markeren
+    (function() {
+      const path = window.location.pathname.split('/').pop() || 'index.html';
+      const links = document.querySelectorAll('#navLinks a');
+
+      links.forEach(a => {
+        const href = (a.getAttribute('href') || '').split('/').pop();
+        if (href === path) a.classList.add('active');
+        else a.classList.remove('active');
+      });
+    })();
+  </script>
 
 </body>
 </html>

@@ -8,8 +8,6 @@
 
 <title>Boef & Brommie: Slagerij op stelten | Bestellen</title>
 
-<meta name="description" content="Bestel het kinderboek Boef & Brommie: Slagerij op stelten. Een grappig en spannend avontuur voor kinderen vanaf ongeveer 9 jaar.">
-
 <link rel="icon" type="image/png" href="favicon.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
@@ -43,7 +41,7 @@ box-sizing:border-box;
 }
 
 
-/* ================= NAVBAR ================= */
+/* NAVBAR */
 
 .navbar{
 background:#0179F1;
@@ -80,16 +78,10 @@ padding:6px 14px;
 border-radius:12px;
 min-width:120px;
 text-align:center;
-transition:0.2s;
-}
-
-.nav-links a:hover{
-background:rgba(255,255,255,0.15);
 }
 
 .nav-links a.active{
 background:#67BED9;
-box-shadow:inset 0 0 0 2px rgba(255,255,255,0.55);
 }
 
 
@@ -110,15 +102,11 @@ width:auto;
 gap:12px;
 }
 
-.nav-links a{
-min-width:auto;
-}
-
 }
 
 
 
-/* ================= HEADER ================= */
+/* HEADER */
 
 .order-header{
 background:#C9E4FF;
@@ -143,13 +131,13 @@ margin:0;
 
 
 
-/* ================= BLOK ================= */
+/* BLOK */
 
 .highlight{
 display:flex;
 flex-direction:column;
 align-items:center;
-gap:24px;
+gap:26px;
 background:#C9E4FF;
 border:2px solid #0179F1;
 border-radius:16px;
@@ -158,7 +146,7 @@ padding:30px;
 
 
 
-/* ================= BOEK ================= */
+/* BOEK */
 
 .image-container{
 display:flex;
@@ -176,28 +164,22 @@ box-shadow:0 4px 10px rgba(0,0,0,0.2);
 .flaptekst-hint{
 font-size:0.9em;
 color:#015ec7;
-opacity:0.9;
 }
-
-
-
-/* boek info rustiger */
 
 .book-info{
 text-align:center;
-line-height:1.45;
-margin-bottom:10px;
+line-height:1.4;
 }
 
 .book-title{
 font-weight:bold;
-font-size:1.3em;
+font-size:1.25em;
 }
 
 .price{
-font-size:1.6em;
+font-size:1.5em;
 font-weight:bold;
-margin:6px 0;
+margin:4px 0;
 }
 
 .shipping{
@@ -207,15 +189,15 @@ color:#444;
 
 
 
-/* ================= FORM ================= */
+/* FORM */
 
 form{
 width:100%;
-max-width:600px;
+max-width:500px;
 display:flex;
 flex-direction:column;
 gap:14px;
-margin-top:6px;
+margin-top:10px;
 }
 
 input,textarea,select{
@@ -232,43 +214,33 @@ min-height:110px;
 resize:vertical;
 }
 
-
-/* dropdown centreren */
-
 select{
 text-align:center;
 text-align-last:center;
-font-size:1.05em;
 }
 
 
 
-/* secties */
-
-.form-section{
-margin-top:10px;
-text-align:center;
-}
+/* TITELS */
 
 .section-title{
 font-weight:bold;
 color:#015ec7;
+margin-top:18px;
 margin-bottom:6px;
 font-size:1.15em;
 }
 
 
 
-/* radio netjes */
+/* RADIO NETJES */
 
 .radio-group{
 display:flex;
 flex-direction:column;
-align-items:flex-start;
+align-items:center;
 gap:10px;
-margin:10px auto 16px;
-width:100%;
-max-width:260px;
+margin-bottom:14px;
 }
 
 .radio-group label{
@@ -276,7 +248,7 @@ display:flex;
 align-items:center;
 gap:10px;
 font-size:1.05em;
-line-height:1.3;
+white-space:nowrap;
 }
 
 .radio-group input{
@@ -285,12 +257,11 @@ margin:0;
 
 .option-note{
 color:#666;
-margin-left:4px;
 }
 
 
 
-/* knop */
+/* BUTTON */
 
 button{
 background:#0179F1;
@@ -298,19 +269,15 @@ color:white;
 font-weight:bold;
 border:none;
 border-radius:12px;
-padding:12px 28px;
+padding:14px 26px;
 font-size:1.15em;
 cursor:pointer;
 margin-top:6px;
 }
 
-button:hover{
-background:#015ec7;
-}
 
 
-
-/* footer */
+/* FOOTER */
 
 footer{
 margin-top:40px;
@@ -337,7 +304,7 @@ color:#666;
 
 <a href="index.html">
 
-<img src="logo-bb.png" alt="Boef & Brommie">
+<img src="logo-bb.png">
 
 </a>
 
@@ -382,17 +349,16 @@ Vul je gegevens in om het boek te bestellen
 
 <a href="flaptekst.html">
 
-<img src="kaftdef.jpg" alt="Boef & Brommie boek">
+<img src="kaftdef.jpg">
 
 </a>
 
 
 <div class="flaptekst-hint">
 
-klik op de kaft om de flaptekst te lezen
+klik om de flaptekst te lezen
 
 </div>
-
 
 
 <div class="book-info">
@@ -403,19 +369,17 @@ Hardcover boek
 
 </div>
 
-
 <div class="price">
 
 €19,95
 
 </div>
 
-
 <div class="shipping">
 
-Ophalen gratis<br>
+Ophalen: gratis<br>
 
-Verzenden €5,95
+Verzenden: €5,95
 
 </div>
 
@@ -437,14 +401,11 @@ Verzenden €5,95
 
 <input type="text" name="Woonplaats" placeholder="Woonplaats" required>
 
-<input type="tel" name="Telefoonnummer" placeholder="Telefoonnummer (voor betaalverzoek)" required>
+<input type="tel" name="Telefoonnummer" placeholder="Telefoonnummer" required>
 
 <input type="email" name="E-mail" placeholder="E-mailadres" required>
 
 
-
-
-<div class="form-section">
 
 <div class="section-title">
 
@@ -467,20 +428,12 @@ Aantal boeken
 <option>8</option>
 <option>9</option>
 
-<option value="Anders">
-
-Anders (aantal bij opmerkingen)
-
-</option>
+<option>Anders</option>
 
 </select>
 
-</div>
 
 
-
-
-<div class="form-section">
 
 <div class="section-title">
 
@@ -510,12 +463,8 @@ Verzenden <span class="option-note">€5,95</span>
 
 </div>
 
-</div>
 
 
-
-
-<div class="form-section">
 
 <div class="section-title">
 
@@ -542,8 +491,6 @@ Betaalverzoek via WhatsApp
 Overschrijven via de bank
 
 </label>
-
-</div>
 
 </div>
 
@@ -579,7 +526,6 @@ Verstuur bestelling
 
 
 
-
 <script>
 
 document.getElementById('bestelForm')
@@ -588,13 +534,9 @@ document.getElementById('bestelForm')
 e.preventDefault();
 
 fetch(this.action,{
-
 method:this.method,
-
 body:new FormData(this),
-
 headers:{'Accept':'application/json'}
-
 })
 
 .then(()=>window.location.href='bedankt.html')
@@ -603,31 +545,8 @@ headers:{'Accept':'application/json'}
 
 });
 
-
-
-
-(function(){
-
-const path=
-window.location.pathname.split('/').pop()
-||'index.html';
-
-
-document
-.querySelectorAll('#navLinks a')
-.forEach(a=>{
-
-if(a.getAttribute('href')===path){
-
-a.classList.add('active');
-
-}
-
-});
-
-})();
-
 </script>
+
 
 
 </body>

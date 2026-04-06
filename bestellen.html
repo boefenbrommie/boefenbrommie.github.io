@@ -42,12 +42,13 @@ text-align:center;
 box-sizing:border-box;
 }
 
-/* NAVBAR */
+
+/* ================= NAVBAR ================= */
 
 .navbar{
 background:#0179F1;
 border-radius:16px;
-padding:12px 16px;
+padding:10px 16px;
 margin-bottom:18px;
 }
 
@@ -55,11 +56,12 @@ margin-bottom:18px;
 display:flex;
 flex-direction:column;
 align-items:center;
-gap:6px;
+gap:4px;
 }
 
+/* groot logo */
 .nav-logo img{
-height:68px;
+height:85px;
 }
 
 .nav-links{
@@ -91,6 +93,7 @@ background:#67BED9;
 box-shadow:inset 0 0 0 2px rgba(255,255,255,0.55);
 }
 
+
 /* desktop */
 
 @media(min-width:600px){
@@ -101,13 +104,13 @@ justify-content:space-between;
 }
 
 .nav-logo img{
-height:78px;
+height:95px;
 }
 
 .nav-links{
 flex-wrap:nowrap;
 width:auto;
-gap:10px;
+gap:12px;
 }
 
 .nav-links a{
@@ -116,7 +119,9 @@ min-width:auto;
 
 }
 
-/* titel blok */
+
+
+/* ================= HEADER ================= */
 
 .order-header{
 background:#C9E4FF;
@@ -139,7 +144,9 @@ font-size:1.6em;
 margin:0;
 }
 
-/* hoofdblok */
+
+
+/* ================= BLOK ================= */
 
 .highlight{
 display:flex;
@@ -152,7 +159,9 @@ border-radius:16px;
 padding:30px;
 }
 
-/* boek */
+
+
+/* ================= BOEK ================= */
 
 .image-container{
 display:flex;
@@ -178,24 +187,25 @@ color:#015ec7;
 opacity:0.85;
 }
 
-/* boek info */
+
+
+/* boek info rustiger */
 
 .book-info{
-margin-top:8px;
+margin-top:6px;
 text-align:center;
-line-height:1.4;
+line-height:1.45;
 }
 
 .book-title{
 font-weight:bold;
-font-size:1.25em;
-margin-bottom:4px;
+font-size:1.3em;
 }
 
 .price{
 font-size:1.6em;
 font-weight:bold;
-margin-bottom:6px;
+margin:6px 0;
 }
 
 .shipping{
@@ -203,7 +213,9 @@ font-size:0.95em;
 color:#444;
 }
 
-/* formulier */
+
+
+/* ================= FORM ================= */
 
 form{
 width:100%;
@@ -215,13 +227,21 @@ margin-top:10px;
 }
 
 input,textarea,select{
-padding:10px;
+padding:11px;
 font-size:1em;
-border-radius:6px;
+border-radius:7px;
 border:1px solid #ccc;
 width:100%;
 box-sizing:border-box;
 }
+
+textarea{
+min-height:110px;
+resize:vertical;
+}
+
+
+/* dropdown centreren */
 
 select{
 text-align:center;
@@ -229,10 +249,7 @@ text-align-last:center;
 font-size:1.05em;
 }
 
-textarea{
-min-height:110px;
-resize:vertical;
-}
+
 
 /* secties */
 
@@ -245,34 +262,41 @@ text-align:center;
 font-weight:bold;
 color:#015ec7;
 margin-bottom:6px;
-margin-top:8px;
-font-size:1.1em;
+font-size:1.15em;
 }
 
-/* radio */
+
+
+/* radio netjes */
 
 .radio-group{
 display:flex;
 flex-direction:column;
-gap:8px;
-margin:8px auto 14px;
+gap:10px;
+margin:10px auto 18px;
 width:100%;
-max-width:320px;
+max-width:340px;
 }
 
 .radio-group label{
-display:grid;
-grid-template-columns:22px 1fr;
+display:flex;
 align-items:center;
-column-gap:10px;
-text-align:left;
-line-height:1.3;
+gap:10px;
+font-size:1.05em;
+line-height:1.4;
+white-space:nowrap;
+}
+
+.radio-group input{
+margin:0;
 }
 
 .option-note{
-font-size:0.9em;
 color:#666;
+margin-left:4px;
 }
+
+
 
 /* knop */
 
@@ -292,6 +316,8 @@ button:hover{
 background:#015ec7;
 }
 
+
+
 /* footer */
 
 footer{
@@ -304,9 +330,12 @@ color:#666;
 
 </head>
 
+
+
 <body>
 
 <div class="container">
+
 
 <nav class="navbar">
 
@@ -318,15 +347,22 @@ color:#666;
 </a>
 </div>
 
+
 <div class="nav-links" id="navLinks">
+
 <a href="index.html">Beginpagina</a>
+
 <a href="bestellen.html">Bestellen</a>
+
 <a href="reviews.html">Reviews</a>
+
 </div>
 
 </div>
 
 </nav>
+
+
 
 <div class="order-header">
 
@@ -339,7 +375,10 @@ Vul je gegevens in om het boek te bestellen
 </div>
 
 
+
+
 <div class="highlight">
+
 
 <div class="image-container">
 
@@ -349,32 +388,49 @@ Vul je gegevens in om het boek te bestellen
 
 </a>
 
+
 <div class="flaptekst-hint">
-klik om de flaptekst te lezen
+
+klik op de kaft om de flaptekst te lezen
+
 </div>
+
 
 
 <div class="book-info">
 
 <div class="book-title">
+
 Hardcover boek
+
 </div>
+
 
 <div class="price">
+
 €19,95
+
 </div>
+
 
 <div class="shipping">
-Ophalen: gratis<br>
-Verzenden: €5,95
-</div>
+
+Ophalen gratis<br>
+
+Verzenden €5,95
 
 </div>
 
 </div>
+
+</div>
+
+
 
 
 <form action="https://formspree.io/f/xykzrdzl" method="POST" id="bestelForm">
+
+
 
 <input type="text" name="Naam" placeholder="Naam" required>
 
@@ -390,28 +446,42 @@ Verzenden: €5,95
 
 
 
+
 <div class="form-section">
 
 <div class="section-title">
+
 Aantal boeken
+
 </div>
+
 
 <select name="Aantal" required>
 
 <option value="">Kies aantal</option>
 
 <option>1</option>
+
 <option>2</option>
+
 <option>3</option>
+
 <option>4</option>
+
 <option>5</option>
+
 <option>6</option>
+
 <option>7</option>
+
 <option>8</option>
+
 <option>9</option>
 
 <option value="Anders">
+
 Anders (aantal bij opmerkingen)
+
 </option>
 
 </select>
@@ -420,54 +490,81 @@ Anders (aantal bij opmerkingen)
 
 
 
+
 <div class="form-section">
 
 <div class="section-title">
+
 Ophalen of verzenden
+
 </div>
+
 
 <div class="radio-group">
 
 <label>
+
 <input type="radio" name="Verzendoptie" value="Ophalen" required>
+
 Ophalen <span class="option-note">gratis</span>
+
 </label>
+
 
 <label>
+
 <input type="radio" name="Verzendoptie" value="Verzenden">
+
 Verzenden <span class="option-note">€5,95</span>
+
 </label>
 
+
 </div>
 
 </div>
+
 
 
 
 <div class="form-section">
 
 <div class="section-title">
+
 Betaalmethode
+
 </div>
+
 
 <div class="radio-group">
 
 <label>
+
 <input type="radio" name="betaalmethode" value="WhatsApp" required>
+
 Betaalverzoek via WhatsApp
+
 </label>
+
 
 <label>
+
 <input type="radio" name="betaalmethode" value="Bank">
-Overschrijving via bank
+
+Overschrijven via de bank
+
 </label>
 
+
 </div>
 
 </div>
+
+
 
 
 <textarea name="Opmerkingen" placeholder="Extra opmerkingen (optioneel)"></textarea>
+
 
 
 <button type="submit">
@@ -476,9 +573,13 @@ Verstuur bestelling
 
 </button>
 
+
+
 </form>
 
 </div>
+
+
 
 
 <footer>
@@ -487,7 +588,9 @@ Verstuur bestelling
 
 </footer>
 
+
 </div>
+
 
 
 
@@ -499,14 +602,22 @@ document.getElementById('bestelForm')
 e.preventDefault();
 
 fetch(this.action,{
+
 method:this.method,
+
 body:new FormData(this),
+
 headers:{'Accept':'application/json'}
+
 })
+
 .then(()=>window.location.href='bedankt.html')
+
 .catch(()=>alert('Er ging iets mis'));
 
 });
+
+
 
 
 (function(){
@@ -514,6 +625,7 @@ headers:{'Accept':'application/json'}
 const path=
 window.location.pathname.split('/').pop()
 ||'index.html';
+
 
 document
 .querySelectorAll('#navLinks a')
@@ -530,6 +642,8 @@ a.classList.add('active');
 })();
 
 </script>
+
+
 
 </body>
 

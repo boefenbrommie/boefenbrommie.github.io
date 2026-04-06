@@ -59,9 +59,8 @@ align-items:center;
 gap:4px;
 }
 
-/* groot logo */
 .nav-logo img{
-height:85px;
+height:90px;
 }
 
 .nav-links{
@@ -94,8 +93,6 @@ box-shadow:inset 0 0 0 2px rgba(255,255,255,0.55);
 }
 
 
-/* desktop */
-
 @media(min-width:600px){
 
 .nav-inner{
@@ -104,7 +101,7 @@ justify-content:space-between;
 }
 
 .nav-logo img{
-height:95px;
+height:100px;
 }
 
 .nav-links{
@@ -152,7 +149,7 @@ margin:0;
 display:flex;
 flex-direction:column;
 align-items:center;
-gap:22px;
+gap:24px;
 background:#C9E4FF;
 border:2px solid #0179F1;
 border-radius:16px;
@@ -167,24 +164,19 @@ padding:30px;
 display:flex;
 flex-direction:column;
 align-items:center;
-gap:12px;
+gap:10px;
 }
 
 .image-container img{
 width:180px;
 border-radius:8px;
 box-shadow:0 4px 10px rgba(0,0,0,0.2);
-transition:0.2s;
-}
-
-.image-container img:hover{
-transform:scale(1.03);
 }
 
 .flaptekst-hint{
 font-size:0.9em;
 color:#015ec7;
-opacity:0.85;
+opacity:0.9;
 }
 
 
@@ -192,9 +184,9 @@ opacity:0.85;
 /* boek info rustiger */
 
 .book-info{
-margin-top:6px;
 text-align:center;
 line-height:1.45;
+margin-bottom:10px;
 }
 
 .book-title{
@@ -222,8 +214,8 @@ width:100%;
 max-width:600px;
 display:flex;
 flex-direction:column;
-gap:12px;
-margin-top:10px;
+gap:14px;
+margin-top:6px;
 }
 
 input,textarea,select{
@@ -254,7 +246,7 @@ font-size:1.05em;
 /* secties */
 
 .form-section{
-margin-top:18px;
+margin-top:10px;
 text-align:center;
 }
 
@@ -272,10 +264,11 @@ font-size:1.15em;
 .radio-group{
 display:flex;
 flex-direction:column;
+align-items:flex-start;
 gap:10px;
-margin:10px auto 18px;
+margin:10px auto 16px;
 width:100%;
-max-width:340px;
+max-width:260px;
 }
 
 .radio-group label{
@@ -283,8 +276,7 @@ display:flex;
 align-items:center;
 gap:10px;
 font-size:1.05em;
-line-height:1.4;
-white-space:nowrap;
+line-height:1.3;
 }
 
 .radio-group input{
@@ -309,7 +301,7 @@ border-radius:12px;
 padding:12px 28px;
 font-size:1.15em;
 cursor:pointer;
-margin-top:10px;
+margin-top:6px;
 }
 
 button:hover{
@@ -342,9 +334,13 @@ color:#666;
 <div class="nav-inner">
 
 <div class="nav-logo">
+
 <a href="index.html">
+
 <img src="logo-bb.png" alt="Boef & Brommie">
+
 </a>
+
 </div>
 
 
@@ -369,7 +365,9 @@ color:#666;
 <h1>Boef & Brommie: Slagerij op stelten</h1>
 
 <p class="subtitle">
+
 Vul je gegevens in om het boek te bestellen
+
 </p>
 
 </div>
@@ -431,7 +429,6 @@ Verzenden €5,95
 <form action="https://formspree.io/f/xykzrdzl" method="POST" id="bestelForm">
 
 
-
 <input type="text" name="Naam" placeholder="Naam" required>
 
 <input type="text" name="Adres" placeholder="Adres" required>
@@ -461,21 +458,13 @@ Aantal boeken
 <option value="">Kies aantal</option>
 
 <option>1</option>
-
 <option>2</option>
-
 <option>3</option>
-
 <option>4</option>
-
 <option>5</option>
-
 <option>6</option>
-
 <option>7</option>
-
 <option>8</option>
-
 <option>9</option>
 
 <option value="Anders">
@@ -519,7 +508,6 @@ Verzenden <span class="option-note">€5,95</span>
 
 </label>
 
-
 </div>
 
 </div>
@@ -555,7 +543,6 @@ Overschrijven via de bank
 
 </label>
 
-
 </div>
 
 </div>
@@ -572,7 +559,6 @@ Overschrijven via de bank
 Verstuur bestelling
 
 </button>
-
 
 
 </form>
@@ -642,7 +628,6 @@ a.classList.add('active');
 })();
 
 </script>
-
 
 
 </body>

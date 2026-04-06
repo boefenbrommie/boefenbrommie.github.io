@@ -79,7 +79,11 @@ border-radius:12px;
 min-width:120px;
 text-align:center;
 }
-
+.nav-links a.active{
+background:#67BED9;
+box-shadow: inset 0 0 0 2px rgba(255,255,255,0.55);
+border-radius:12px;
+}
 .nav-links a.active{
 background:#67BED9;
 }
@@ -546,7 +550,30 @@ headers:{'Accept':'application/json'}
 });
 
 </script>
+<script>
 
+(function(){
+
+const path =
+window.location.pathname.split('/').pop() || 'index.html';
+
+document.querySelectorAll('#navLinks a')
+.forEach(link => {
+
+if(link.getAttribute('href') === path){
+
+link.classList.add('active');
+
+}
+
+});
+
+})();
+
+</script>
+
+</body>
+</html>
 
 
 </body>

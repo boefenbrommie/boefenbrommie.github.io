@@ -7,7 +7,7 @@
 
 <title>Boef & Brommie: Slagerij op stelten | Bestellen</title>
 
-<meta name="description" content="Bestel het kinderboek Boef & Brommie: Slagerij op stelten. Een grappig en spannend avontuur voor kinderen vanaf ongeveer 9 jaar.">
+<meta name="description" content="Bestel het kinderboek Boef & Brommie: Slagerij op stelten. Een grappig en spannend avontuur voor kinderen vanaf ongeveer 8 jaar.">
 
 <link rel="icon" type="image/png" href="favicon.png">
 
@@ -238,6 +238,51 @@ cursor:pointer;
 white-space:nowrap;
 }
 
+.form-section{
+margin-top:18px;
+margin-bottom:8px;
+text-align:center;
+}
+
+.section-title{
+display:block;
+font-weight:bold;
+color:#015ec7;
+margin-bottom:8px;
+font-size:1.05em;
+}
+
+/* radio groep rustiger */
+.radio-group{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+gap:8px;
+margin:8px auto 12px;
+width:fit-content;
+}
+
+/* radio label */
+.radio-group label{
+display:flex;
+align-items:center;
+gap:8px;
+font-weight:normal;
+cursor:pointer;
+}
+
+/* kleine prijs */
+.radio-group small{
+color:#666;
+font-size:0.9em;
+}
+
+/* select mooier */
+select{
+text-align:center;
+font-size:1.05em;
+}
+
 /* footer */
 footer{
 margin-top:40px;
@@ -322,10 +367,13 @@ Verzenden: €5,95
 
 <input type="email" name="E-mail" placeholder="E-mailadres" required>
 
-<label class="center-label">Aantal boeken</label>
+<div class="form-section">
+
+<label class="section-title">
+Aantal boeken
+</label>
 
 <select name="Aantal" required>
-
 <option value="">Kies aantal</option>
 
 <option>1</option>
@@ -344,23 +392,39 @@ Anders (aantal bij opmerkingen)
 
 </select>
 
-<legend><strong>Ophalen of verzenden</strong></legend>
+</div>
+
+
+<div class="form-section">
+
+<div class="section-title">
+Ophalen of verzenden
+</div>
 
 <div class="radio-group">
 
 <label>
 <input type="radio" name="Verzendoptie" value="Ophalen" required>
-Ophalen (gratis)
+<span>Ophalen</span>
+<small>gratis</small>
 </label>
 
 <label>
 <input type="radio" name="Verzendoptie" value="Verzenden">
-Verzenden (€5,95)
+<span>Verzenden</span>
+<small>€5,95</small>
 </label>
 
 </div>
 
-<legend><strong>Kies betaalmethode</strong></legend>
+</div>
+
+
+<div class="form-section">
+
+<div class="section-title">
+Betaalmethode
+</div>
 
 <div class="radio-group">
 
@@ -376,6 +440,7 @@ Overschrijven via de bank
 
 </div>
 
+</div>
 <textarea name="Opmerkingen" placeholder="Extra opmerkingen (optioneel)"></textarea>
 
 <button type="submit">

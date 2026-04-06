@@ -7,9 +7,9 @@
 
 <title>Boef & Brommie: Slagerij op stelten | Kinderboek vol humor en avontuur</title>
 
-<meta name="description" content="Boef & Brommie: Slagerij op stelten is een grappig en spannend kinderboek voor kinderen vanaf ongeveer 7 jaar. Vol humor, avontuur en verrassingen. Bestel het boek direct online.">
+<meta name="description" content="Boef & Brommie: Slagerij op stelten is een grappig en spannend kinderboek voor kinderen vanaf ongeveer 8 jaar. Vol humor, avontuur en verrassingen. Bestel het boek direct online.">
 
-<meta name="keywords" content="Boef en Brommie, kinderboek, voorleesboek, grappig kinderboek, spannend kinderboek, boek voor kinderen, boek 7 jaar, boek 8 jaar, boek 9 jaar">
+<meta name="keywords" content="Boef en Brommie, kinderboek, voorleesboek, grappig kinderboek, spannend kinderboek, boek voor kinderen, boek 8 jaar, boek 9 jaar, boek 10 jaar, boek 11 jaar, boek 12 jaar">
 
 <meta name="author" content="Gijs Lanen">
 
@@ -55,79 +55,78 @@ gtag('config', 'G-9CGG9GV25Y');
 
 
 /* NAVBAR */
-
 .navbar {
   background: #0179F1;
   border-radius: 16px;
-  padding: 16px 18px;
+  padding: 12px 16px;   /* minder verticale ruimte */
   margin-bottom: 18px;
 }
 
+/* logo + knoppen onder elkaar op mobiel */
 .nav-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 6px;             /* minder ruimte tussen logo en knoppen */
 }
 
+/* groter logo */
 .nav-logo img {
-  height: 44px;
+  height: 64px;
 }
 
 /* knoppen */
-
 .nav-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;             /* knoppen dichter bij elkaar */
 }
 
+/* knop styling */
 .nav-links a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.05em;
-
-  padding: 8px 14px;
+  padding: 6px 12px;    /* minder hoogte */
   border-radius: 10px;
-
-  min-width: 120px;
+  min-width: 110px;
   text-align: center;
-
   transition: background 0.2s ease, transform 0.05s ease;
 }
-
-/* hover */
 
 .nav-links a:hover {
   background: rgba(255,255,255,0.15);
 }
 
 /* actieve pagina */
-
 .nav-links a.active {
   background: #67BED9;
   box-shadow: inset 0 0 0 2px rgba(255,255,255,0.55);
 }
 
 /* desktop layout */
+@media (min-width:600px) {
 
-@media (min-width: 600px) {
+  .nav-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.nav-inner {
-  flex-direction: row;
-  justify-content: space-between;
-}
+  .nav-logo img {
+    height: 70px;
+  }
 
-.nav-links {
-  flex-wrap: nowrap;
-}
+  .nav-links {
+    gap: 10px;
+  }
 
-.nav-links a {
-  min-width: auto;
-}
-
+  .nav-links a {
+    min-width: auto;
+    padding: 6px 14px;
+  }
 }
 
     /* Titel */

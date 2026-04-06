@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,15 +8,13 @@
 
 <title>Boef & Brommie: Slagerij op stelten | Bestellen</title>
 
-<meta name="description" content="Bestel het kinderboek Boef & Brommie: Slagerij op stelten. Een grappig en spannend avontuur voor kinderen vanaf ongeveer 8 jaar.">
+<meta name="description" content="Bestel het kinderboek Boef & Brommie: Slagerij op stelten. Een grappig en spannend avontuur voor kinderen vanaf ongeveer 9 jaar.">
 
 <link rel="icon" type="image/png" href="favicon.png">
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
 
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9CGG9GV25Y"></script>
 
 <script>
@@ -28,7 +27,7 @@ gtag('config', 'G-9CGG9GV25Y');
 <style>
 
 body{
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 background:#f7f7f7;
 margin:0;
 color:#333;
@@ -40,9 +39,11 @@ margin:0 auto;
 padding:40px 20px;
 background:white;
 text-align:center;
+box-sizing:border-box;
 }
 
 /* NAVBAR */
+
 .navbar{
 background:#0179F1;
 border-radius:16px;
@@ -50,7 +51,6 @@ padding:12px 16px;
 margin-bottom:18px;
 }
 
-/* mobiel */
 .nav-inner{
 display:flex;
 flex-direction:column;
@@ -58,12 +58,10 @@ align-items:center;
 gap:6px;
 }
 
-/* groot logo */
 .nav-logo img{
-height:80px;
+height:68px;
 }
 
-/* knoppen */
 .nav-links{
 display:flex;
 flex-wrap:wrap;
@@ -94,6 +92,7 @@ box-shadow:inset 0 0 0 2px rgba(255,255,255,0.55);
 }
 
 /* desktop */
+
 @media(min-width:600px){
 
 .nav-inner{
@@ -113,26 +112,12 @@ gap:10px;
 
 .nav-links a{
 min-width:auto;
-padding:6px 12px;
 }
 
 }
 
-/* titel */
-h1{
-font-family:'Anton', sans-serif;
-color:#0179F1;
-margin-bottom:8px;
-}
+/* titel blok */
 
-.subtitle{
-font-family:'Lobster Two', cursive;
-color:#61acfb;
-margin:0;
-font-size:1.6em;
-}
-
-/* header blok */
 .order-header{
 background:#C9E4FF;
 border:2px solid #0179F1;
@@ -141,12 +126,26 @@ padding:22px 20px;
 margin-bottom:35px;
 }
 
-/* bestelblok */
+h1{
+font-family:'Anton',sans-serif;
+color:#0179F1;
+margin:0 0 6px;
+}
+
+.subtitle{
+font-family:'Lobster Two',cursive;
+color:#61acfb;
+font-size:1.6em;
+margin:0;
+}
+
+/* hoofdblok */
+
 .highlight{
 display:flex;
 flex-direction:column;
 align-items:center;
-gap:20px;
+gap:22px;
 background:#C9E4FF;
 border:2px solid #0179F1;
 border-radius:16px;
@@ -154,6 +153,7 @@ padding:30px;
 }
 
 /* boek */
+
 .image-container{
 display:flex;
 flex-direction:column;
@@ -172,22 +172,49 @@ transition:0.2s;
 transform:scale(1.03);
 }
 
+.flaptekst-hint{
+font-size:0.9em;
+color:#015ec7;
+opacity:0.85;
+}
+
+/* boek info */
+
 .book-info{
-font-size:1.05em;
-color:black;
+margin-top:8px;
+text-align:center;
+line-height:1.4;
+}
+
+.book-title{
+font-weight:bold;
+font-size:1.25em;
+margin-bottom:4px;
+}
+
+.price{
+font-size:1.6em;
+font-weight:bold;
+margin-bottom:6px;
+}
+
+.shipping{
+font-size:0.95em;
+color:#444;
 }
 
 /* formulier */
+
 form{
 width:100%;
 max-width:600px;
 display:flex;
 flex-direction:column;
-gap:14px;
-margin-top:15px;
+gap:12px;
+margin-top:10px;
 }
 
-input,textarea,select,button{
+input,textarea,select{
 padding:10px;
 font-size:1em;
 border-radius:6px;
@@ -196,95 +223,67 @@ width:100%;
 box-sizing:border-box;
 }
 
-label{
-text-align:left;
-font-weight:bold;
+textarea{
+min-height:110px;
+resize:vertical;
 }
 
-.center-label{
+/* secties */
+
+.form-section{
+margin-top:18px;
 text-align:center;
 }
 
+.section-title{
+font-weight:bold;
+color:#015ec7;
+margin-bottom:6px;
+}
+
+/* radio */
+
+.radio-group{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+gap:6px;
+margin:6px auto 12px;
+width:fit-content;
+}
+
+.radio-group label{
+display:flex;
+align-items:center;
+gap:8px;
+cursor:pointer;
+}
+
+.option-note{
+font-size:0.9em;
+color:#666;
+}
+
 /* knop */
+
 button{
 background:#0179F1;
 color:white;
 font-weight:bold;
 border:none;
+border-radius:12px;
+padding:12px 28px;
+font-size:1.15em;
 cursor:pointer;
-transition:0.2s;
+margin-top:10px;
 }
 
 button:hover{
 background:#015ec7;
 }
 
-/* radio netjes onder elkaar */
-.radio-group{
-display:flex;
-flex-direction:column;
-align-items:flex-start;
-margin:6px auto 18px;
-width:fit-content;
-}
-
-.radio-group label{
-display:grid;
-grid-template-columns:20px auto;
-align-items:center;
-column-gap:8px;
-margin:6px 0;
-cursor:pointer;
-white-space:nowrap;
-}
-
-.form-section{
-margin-top:18px;
-margin-bottom:8px;
-text-align:center;
-}
-
-.section-title{
-display:block;
-font-weight:bold;
-color:#015ec7;
-margin-bottom:8px;
-font-size:1.05em;
-text-align:center;
-}
-
-/* radio groep rustiger */
-.radio-group{
-display:flex;
-flex-direction:column;
-align-items:flex-start;
-gap:8px;
-margin:8px auto 12px;
-width:fit-content;
-}
-
-/* radio label */
-.radio-group label{
-display:flex;
-align-items:center;
-gap:8px;
-font-weight:normal;
-cursor:pointer;
-}
-
-/* kleine prijs */
-.radio-group small{
-color:#666;
-font-size:0.9em;
-}
-
-/* select mooier */
-select{
-text-align:center;
-font-size:1.05em;
-}
-
 /* footer */
+
 footer{
 margin-top:40px;
 font-size:0.9em;
@@ -300,6 +299,7 @@ color:#666;
 <div class="container">
 
 <nav class="navbar">
+
 <div class="nav-inner">
 
 <div class="nav-logo">
@@ -315,6 +315,7 @@ color:#666;
 </div>
 
 </div>
+
 </nav>
 
 <div class="order-header">
@@ -327,32 +328,41 @@ Vul je gegevens in om het boek te bestellen
 
 </div>
 
+
 <div class="highlight">
 
 <div class="image-container">
 
 <a href="flaptekst.html">
+
 <img src="kaftdef.jpg" alt="Boef & Brommie boek">
+
 </a>
 
-<p style="font-size:0.95em;color:#015ec7;margin:0;">
+<div class="flaptekst-hint">
 klik op de kaft om de flaptekst te lezen
-</p>
+</div>
+
 
 <div class="book-info">
 
-<p><strong>Hardcover boek</strong></p>
+<div class="book-title">
+Hardcover boek
+</div>
 
-<p>Prijs: €19,95</p>
+<div class="price">
+€19,95
+</div>
 
-<p>
-Ophalen: gratis<br>
-Verzenden: €5,95
-</p>
-
+<div class="shipping">
+Ophalen gratis<br>
+Verzenden €5,95
 </div>
 
 </div>
+
+</div>
+
 
 <form action="https://formspree.io/f/xykzrdzl" method="POST" id="bestelForm">
 
@@ -368,13 +378,16 @@ Verzenden: €5,95
 
 <input type="email" name="E-mail" placeholder="E-mailadres" required>
 
+
+
 <div class="form-section">
 
-<label class="section-title">
+<div class="section-title">
 Aantal boeken
-</label>
+</div>
 
 <select name="Aantal" required>
+
 <option value="">Kies aantal</option>
 
 <option>1</option>
@@ -396,6 +409,7 @@ Anders (aantal bij opmerkingen)
 </div>
 
 
+
 <div class="form-section">
 
 <div class="section-title">
@@ -406,19 +420,20 @@ Ophalen of verzenden
 
 <label>
 <input type="radio" name="Verzendoptie" value="Ophalen" required>
-<span>Ophalen</span>
-<small>gratis</small>
+Ophalen
+<span class="option-note">gratis</span>
 </label>
 
 <label>
 <input type="radio" name="Verzendoptie" value="Verzenden">
-<span>Verzenden</span>
-<small>€5,95</small>
+Verzenden
+<span class="option-note">€5,95</span>
 </label>
 
 </div>
 
 </div>
+
 
 
 <div class="form-section">
@@ -431,36 +446,42 @@ Betaalmethode
 
 <label>
 <input type="radio" name="betaalmethode" value="WhatsApp" required>
-Betaalverzoek WhatsApp
+Betaalverzoek via WhatsApp
 </label>
 
 <label>
 <input type="radio" name="betaalmethode" value="Bank">
-Oververschrijven via bank
+Overschrijven via de bank
 </label>
 
 </div>
 
 </div>
+
+
 <textarea name="Opmerkingen" placeholder="Extra opmerkingen (optioneel)"></textarea>
 
+
 <button type="submit">
+
 Verstuur bestelling
+
 </button>
 
 </form>
 
 </div>
 
+
 <footer>
 
-<p>
 © Boef & Brommie
-</p>
 
 </footer>
 
 </div>
+
+
 
 <script>
 
@@ -481,6 +502,7 @@ headers:{'Accept':'application/json'}
 
 });
 
+
 /* actieve pagina */
 
 (function(){
@@ -493,11 +515,10 @@ document
 .querySelectorAll('#navLinks a')
 .forEach(a=>{
 
-if(
-a.getAttribute('href')
-===path
-){
+if(a.getAttribute('href')===path){
+
 a.classList.add('active');
+
 }
 
 });
@@ -507,4 +528,5 @@ a.classList.add('active');
 </script>
 
 </body>
+
 </html>

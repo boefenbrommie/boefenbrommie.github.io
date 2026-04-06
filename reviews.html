@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+
 <meta charset="UTF-8">
-<title>Reviews – Boef & Brommie: Slagerij op stelten</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reviews | Boef & Brommie: Slagerij op stelten</title>
 
 <link rel="icon" type="image/png" href="favicon.png">
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
 
@@ -24,121 +25,118 @@ color:#333;
 max-width:900px;
 margin:0 auto;
 padding:40px 20px;
-background:#fff;
-text-align:center;   /* zorgt ook voor centreren van knoppen */
+background:white;
+text-align:center;
 box-sizing:border-box;
 }
 
-/* ================= NAVBAR ================= */
-
 /* NAVBAR */
-.navbar {
-  background: #0179F1;
-  border-radius: 16px;
-  padding: 12px 16px;
-  margin-bottom: 18px;
+
+.navbar{
+background:#0179F1;
+border-radius:16px;
+padding:12px 16px;
+margin-bottom:18px;
 }
 
-/* mobiel layout */
-.nav-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+.nav-inner{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:6px;
 }
 
 /* groter logo */
-.nav-logo img {
-  height: 60px;
-}
-
-/* knoppen onder elkaar centreren */
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
+.nav-logo img{
+height:68px;
 }
 
 /* knoppen */
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.05em;
-  padding: 8px 14px;
-  border-radius: 12px;
-  min-width: 130px;
-  text-align: center;
-  transition: background 0.2s ease;
+.nav-links{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:6px;
+width:100%;
 }
 
-/* hover */
-.nav-links a:hover {
-  background: rgba(255,255,255,0.15);
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:1.05em;
+padding:6px 14px;
+border-radius:12px;
+min-width:120px;
+text-align:center;
+transition:0.2s;
 }
 
-/* actieve pagina */
-.nav-links a.active {
-  background: #67BED9;
-  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.55);
+.nav-links a:hover{
+background:rgba(255,255,255,0.15);
+}
+
+.nav-links a.active{
+background:#67BED9;
+box-shadow:inset 0 0 0 2px rgba(255,255,255,0.55);
 }
 
 /* desktop */
-@media (min-width:600px) {
+@media(min-width:600px){
 
-  .nav-inner {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .nav-logo img {
-    height: 70px;
-  }
-
-  .nav-links {
-    flex-wrap: nowrap;
-    width: auto;
-  }
-
-  .nav-links a {
-    min-width: auto;
-  }
+.nav-inner{
+flex-direction:row;
+justify-content:space-between;
 }
 
-/* ================= HERO ================= */
+.nav-logo img{
+height:78px;
+}
+
+.nav-links{
+flex-wrap:nowrap;
+width:auto;
+gap:10px;
+}
+
+.nav-links a{
+min-width:auto;
+padding:6px 12px;
+}
+
+}
+
+/* HERO */
 
 .hero-box{
 background:#C9E4FF;
 border:2px solid #0179F1;
 border-radius:16px;
-padding:22px 18px;
-text-align:center;
+padding:20px 20px;
 margin-bottom:22px;
 }
 
 .hero-box h1{
 font-family:'Anton',sans-serif;
 color:#0179F1;
-font-size:2.3em;
-margin:0 0 10px;
+font-size:2.2em;
+margin:0 0 8px;
 }
 
 .hero-box .intro{
 font-family:'Lobster Two',cursive;
 color:#0179F1;
-font-size:1.5em;
+font-size:1.4em;
 margin:0;
 }
 
-/* ================= FORM ================= */
+/* FORM BOX */
 
 .box{
 background:#C9E4FF;
 border:2px solid #0179F1;
 border-radius:16px;
-padding:20px 25px 32px;
+padding:18px 25px 30px;
 text-align:left;
 }
 
@@ -146,7 +144,7 @@ form{
 display:flex;
 flex-direction:column;
 gap:14px;
-margin-top:10px;
+margin-top:8px;
 }
 
 input,textarea,select{
@@ -156,7 +154,7 @@ border-radius:6px;
 border:1px solid #ccc;
 width:100%;
 box-sizing:border-box;
-background:#fff;
+background:white;
 }
 
 textarea{
@@ -175,12 +173,12 @@ flex:1;
 
 .label{
 font-weight:bold;
-margin-top:10px;
-margin-bottom:6px;
+margin-top:8px;
+margin-bottom:4px;
 color:#015ec7;
 }
 
-/* ================= STERREN ================= */
+/* sterren */
 
 .sterren-label{
 display:flex;
@@ -197,11 +195,10 @@ font-weight:normal;
 .stars{
 display:flex;
 justify-content:center;
-align-items:center;
 padding:12px;
 border:1px solid #ccc;
 border-radius:6px;
-background:#fff;
+background:white;
 direction:rtl;
 }
 
@@ -215,7 +212,7 @@ font-size:28px;
 padding:0 6px;
 cursor:pointer;
 color:#cfcfcf;
-transition:color .15s, transform .15s;
+transition:0.15s;
 direction:ltr;
 }
 
@@ -240,17 +237,17 @@ margin-top:6px;
 font-size:0.95em;
 }
 
-/* ================= BUTTON ================= */
+/* knop */
 
 button{
 align-self:center;
-margin-top:8px;
-margin-bottom:24px;
+margin-top:10px;
+margin-bottom:20px;
 padding:12px 30px;
 font-size:1.2em;
 font-family:'Lobster Two',cursive;
 background:#0179F1;
-color:#fff;
+color:white;
 border:none;
 border-radius:12px;
 cursor:pointer;
@@ -266,7 +263,7 @@ color:#555;
 font-size:0.95em;
 }
 
-/* ================= REVIEWS ================= */
+/* reviews */
 
 .reviews-list{
 margin-top:30px;
@@ -281,7 +278,7 @@ margin-bottom:16px;
 }
 
 .review-card{
-background:#fff;
+background:white;
 border:2px solid rgba(1,121,241,0.25);
 border-radius:14px;
 padding:16px;
@@ -295,15 +292,11 @@ color:#015ec7;
 margin-bottom:6px;
 }
 
-.review-stars{
-margin-left:6px;
-}
-
-/* ================= LINKS ================= */
+/* links onderaan */
 
 .back-link{
-display:inline-block;
-margin-top:22px;
+display:block;
+margin-top:20px;
 font-weight:bold;
 color:#0179F1;
 text-decoration:none;
@@ -318,10 +311,9 @@ footer{
 margin-top:40px;
 font-size:0.9em;
 color:#666;
-text-align:center;
 }
 
-/* ================= MOBILE ================= */
+/* mobiel */
 
 @media(max-width:560px){
 
@@ -330,11 +322,11 @@ flex-direction:column;
 }
 
 .hero-box h1{
-font-size:2em;
+font-size:1.9em;
 }
 
 .hero-box .intro{
-font-size:1.25em;
+font-size:1.2em;
 }
 
 .stars label{
@@ -344,6 +336,7 @@ font-size:26px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -351,6 +344,7 @@ font-size:26px;
 <div class="container">
 
 <nav class="navbar">
+
 <div class="nav-inner">
 
 <div class="nav-logo">
@@ -366,41 +360,60 @@ font-size:26px;
 </div>
 
 </div>
+
 </nav>
 
 <div class="hero-box">
+
 <h1>Heb je het boek gelezen?</h1>
+
 <p class="intro">
 Zou je een korte review willen schrijven?<br>
-* onder het formulier vind je reviews van andere lezers *
+onder het formulier vind je reviews van andere lezers
 </p>
+
 </div>
 
 <div class="box">
 
 <form action="https://formspree.io/f/mojnnyjn" method="POST" id="reviewForm">
 
-<div class="label">Naam en leeftijd (optioneel)</div>
-
-<div class="row">
-<input type="text" name="Naam" placeholder="Naam (optioneel)">
-<input type="text" name="Leeftijd" placeholder="Leeftijd (optioneel)">
+<div class="label">
+Naam en leeftijd (optioneel)
 </div>
 
-<div class="label">Wie ben je?*</div>
+<div class="row">
+
+<input type="text" name="Naam" placeholder="Naam">
+
+<input type="text" name="Leeftijd" placeholder="Leeftijd">
+
+</div>
+
+<div class="label">
+Wie ben je?*
+</div>
 
 <select name="Wie" required>
+
 <option value="">Kies een optie</option>
-<option value="Kind">Kind</option>
-<option value="Ouder">Ouder</option>
-<option value="Leerkracht">Leerkracht</option>
-<option value="Voorlezer">Voorlezer</option>
-<option value="Anders">Anders</option>
+
+<option>Kind</option>
+<option>Ouder</option>
+<option>Leerkracht</option>
+<option>Voorlezer</option>
+<option>Anders</option>
+
 </select>
 
 <div class="label sterren-label">
+
 Aantal sterren*
-<span class="sterren-hint">(klik om te kiezen)</span>
+
+<span class="sterren-hint">
+(klik om te kiezen)
+</span>
+
 </div>
 
 <div class="stars" id="sterren">
@@ -430,56 +443,102 @@ Kies eerst een aantal sterren ⭐
 
 <input type="hidden" name="Type" value="Review">
 
-<button type="submit">Review versturen</button>
+<button type="submit">
+
+Review versturen
+
+</button>
 
 </form>
 
-<p class="note">Reviews worden na controle op de website geplaatst.</p>
+<p class="note">
+
+Reviews worden na controle op de website geplaatst.
+
+</p>
 
 <div class="reviews-list">
 
-<h2 class="reviews-title">Reviews</h2>
+<h2 class="reviews-title">
+
+Reviews
+
+</h2>
 
 <div class="review-card">
-<div class="review-meta">Ouder <span class="review-stars">⭐⭐⭐⭐⭐</span></div>
-<div>“We hebben hard gelachen. Lekker vlot en vol gekke wendingen!”</div>
+
+<div class="review-meta">
+Ouder ⭐⭐⭐⭐⭐
+</div>
+
+We hebben hard gelachen. Lekker vlot en vol gekke wendingen!
+
 </div>
 
 <div class="review-card">
-<div class="review-meta">Ouder <span class="review-stars">⭐⭐⭐⭐</span></div>
-<div>“Ideaal om samen te lezen. Humor én spanning, kinderen willen door!”</div>
+
+<div class="review-meta">
+Ouder ⭐⭐⭐⭐
+</div>
+
+Ideaal om samen te lezen. Humor én spanning, kinderen willen door!
+
 </div>
 
 <div class="review-card">
-<div class="review-meta">Kind (10) <span class="review-stars">⭐⭐⭐⭐⭐</span></div>
-<div>“Boef is grappig en ik vond de salamikevers supergoor (maar leuk)!”</div>
+
+<div class="review-meta">
+Kind (10) ⭐⭐⭐⭐⭐
 </div>
+
+Boef is grappig en ik vond de salamikevers supergoor (maar leuk)!
 
 </div>
 
 </div>
 
-<a href="bestellen.html" class="back-link">← Terug naar bestellen</a><br>
-<a href="index.html" class="back-link">← Terug naar beginpagina</a>
+</div>
+
+<a href="bestellen.html" class="back-link">
+← Terug naar bestellen
+</a>
+
+<a href="index.html" class="back-link">
+← Terug naar beginpagina
+</a>
 
 <footer>
-<p>© Boef & Brommie – bestelboefenbrommie.nl – koopboefenbrommie.nl</p>
+
+© Boef & Brommie
+
 </footer>
 
 </div>
 
 <script>
 
-document.getElementById('reviewForm').addEventListener('submit',function(e){
+document.getElementById('reviewForm')
+.addEventListener('submit',function(e){
 
 const sterren=document.querySelector('input[name="Sterren"]:checked');
+
 const error=document.getElementById('sterren-error');
 
 if(!sterren){
+
 e.preventDefault();
+
 error.style.display='block';
-document.getElementById('sterren').scrollIntoView({behavior:'smooth',block:'center'});
+
+document
+.getElementById('sterren')
+.scrollIntoView({
+behavior:'smooth',
+block:'center'
+});
+
 return;
+
 }
 
 error.style.display='none';
@@ -491,24 +550,27 @@ method:this.method,
 body:new FormData(this),
 headers:{'Accept':'application/json'}
 })
-.then(()=>{
-window.location.href='bedankt-review.html';
-})
-.catch(()=>{
-alert('Er is iets misgegaan. Probeer het opnieuw.');
-});
+.then(()=>window.location.href='bedankt-review.html')
+.catch(()=>alert('Er ging iets mis'));
 
 });
 
-/* actieve pagina markeren */
+/* actieve pagina */
 
 (function(){
 
-const path=window.location.pathname.split('/').pop()||'index.html';
+const path=
+window.location.pathname.split('/').pop()
+||'index.html';
 
-document.querySelectorAll('#navLinks a').forEach(a=>{
+document
+.querySelectorAll('#navLinks a')
+.forEach(a=>{
 
-if(a.getAttribute('href')===path){
+if(
+a.getAttribute('href')
+===path
+){
 a.classList.add('active');
 }
 

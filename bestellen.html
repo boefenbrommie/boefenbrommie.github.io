@@ -223,6 +223,12 @@ width:100%;
 box-sizing:border-box;
 }
 
+select{
+text-align:center;
+text-align-last:center;
+font-size:1.05em;
+}
+
 textarea{
 min-height:110px;
 resize:vertical;
@@ -239,6 +245,8 @@ text-align:center;
 font-weight:bold;
 color:#015ec7;
 margin-bottom:6px;
+margin-top:8px;
+font-size:1.1em;
 }
 
 /* radio */
@@ -246,17 +254,19 @@ margin-bottom:6px;
 .radio-group{
 display:flex;
 flex-direction:column;
-align-items:flex-start;
-gap:6px;
-margin:6px auto 12px;
-width:fit-content;
+gap:8px;
+margin:8px auto 14px;
+width:100%;
+max-width:320px;
 }
 
 .radio-group label{
-display:flex;
+display:grid;
+grid-template-columns:22px 1fr;
 align-items:center;
-gap:8px;
-cursor:pointer;
+column-gap:10px;
+text-align:left;
+line-height:1.3;
 }
 
 .option-note{
@@ -340,7 +350,7 @@ Vul je gegevens in om het boek te bestellen
 </a>
 
 <div class="flaptekst-hint">
-klik op de kaft om de flaptekst te lezen
+klik om de flaptekst te lezen
 </div>
 
 
@@ -355,8 +365,8 @@ Hardcover boek
 </div>
 
 <div class="shipping">
-Ophalen gratis<br>
-Verzenden €5,95
+Ophalen: gratis<br>
+Verzenden: €5,95
 </div>
 
 </div>
@@ -420,14 +430,12 @@ Ophalen of verzenden
 
 <label>
 <input type="radio" name="Verzendoptie" value="Ophalen" required>
-Ophalen
-<span class="option-note">gratis</span>
+Ophalen <span class="option-note">gratis</span>
 </label>
 
 <label>
 <input type="radio" name="Verzendoptie" value="Verzenden">
-Verzenden
-<span class="option-note">€5,95</span>
+Verzenden <span class="option-note">€5,95</span>
 </label>
 
 </div>
@@ -451,7 +459,7 @@ Betaalverzoek via WhatsApp
 
 <label>
 <input type="radio" name="betaalmethode" value="Bank">
-Overschrijven via de bank
+Overschrijving via bank
 </label>
 
 </div>
@@ -485,8 +493,6 @@ Verstuur bestelling
 
 <script>
 
-/* formulier verzenden */
-
 document.getElementById('bestelForm')
 .addEventListener('submit',function(e){
 
@@ -502,8 +508,6 @@ headers:{'Accept':'application/json'}
 
 });
 
-
-/* actieve pagina */
 
 (function(){
 

@@ -287,7 +287,9 @@ border-radius:16px;
 display:block;
 }
 
-.play-button{
+/* DESKTOP knop */
+
+.desktop-play-button{
 position:absolute;
 left:50%;
 top:50%;
@@ -299,6 +301,48 @@ border-radius:14px;
 font-size:1.3em;
 font-weight:bold;
 box-shadow:0 4px 12px rgba(0,0,0,0.25);
+transition:0.2s ease;
+}
+
+/* subtiele mobiele knop */
+
+.mobile-play-button{
+display:none;
+}
+
+/* hover desktop */
+
+.video-link:hover .desktop-play-button{
+transform:translate(-50%,-50%) scale(1.05);
+}
+
+/* MOBIEL */
+
+@media(max-width:600px){
+
+.desktop-play-button{
+display:none;
+}
+
+.mobile-play-button{
+display:flex;
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+width:58px;
+height:58px;
+border-radius:50%;
+background:rgba(1,121,241,0.82);
+align-items:center;
+justify-content:center;
+font-size:1.6em;
+color:white;
+font-weight:bold;
+backdrop-filter:blur(4px);
+box-shadow:0 4px 10px rgba(0,0,0,0.25);
+}
+
 }
 </style>
 </head>
@@ -473,7 +517,13 @@ class="video-link">
 src="https://img.youtube.com/vi/_MUHt1VXhBc/maxresdefault.jpg" 
 alt="Boef & Brommie trailer">
 
-<div class="play-button">▶ Bekijk op YouTube</div>
+<div class="desktop-play-button">
+▶ Bekijk op YouTube
+</div>
+
+<div class="mobile-play-button">
+▶
+</div>
 
 </a>
 

@@ -550,7 +550,7 @@ Lees meer reviews
     Van verveling tot interactief kinderboek</i>:
   </p>
 
-  <audio controls class="podcast-player">
+  <audio controls class="podcast-player" id="podcastPlayer">
     <source src="podcast1.m4a" type="audio/mp4">
     Je browser ondersteunt dit audio-element niet.
   </audio>
@@ -608,11 +608,25 @@ link.classList.add('active');
 }
 
 });
-
 })();
 
-</script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var podcastPlayer = document.getElementById('podcastPlayer');
+    var isTracked = false; // Voorkomt dubbele metingen als men tussendoor pauzeert
 
+    if (podcastPlayer) {
+      podcastPlayer.addEventListener('play', function() {
+        if (!isTracked) {
+          if (typeof gtag === 'function') {
+            gtag('event', 'podcast_play', {
+              'event_category': 'Audio',
+              'event_label': 'Boef & Brommie Podcast Aflevering 1'
+            });
+          }
+          isTracked = true; // Zorgt dat elke afspeelsessie 1x telt
+        }
+      });
+  </script>
+  
 </body>
-
 </html>

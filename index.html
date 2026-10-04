@@ -45,103 +45,90 @@ body {
   color: #333;
 }
 
-.container{
-max-width:900px;
-margin:0 auto;
-padding:40px 20px;
-background:#fff;
-box-sizing:border-box;
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #fff;
+  box-sizing: border-box;
 }
 
-/* NAVBAR */
-.navbar {
-  background: #0179F1;
-  border-radius: 16px;
-  padding: 10px 14px;
-  margin-bottom: 18px;
-}
-
-/* mobiel */
 /* ================= NAVBAR ================= */
 
-.navbar{
-background:#0179F1;
-border-radius:20px;
-padding:18px 20px;
-margin-bottom:30px;
+.navbar {
+  background: #0179F1;
+  border: 2px solid #015ec7; /* OPLOSSING: Donkerblauwe rand rondom de gehele menubalk */
+  border-radius: 20px;
+  padding: 18px 20px;
+  margin-bottom: 30px;
 }
 
-.nav-inner{
-display:flex;
-flex-direction:row;
-align-items:center;
-justify-content:space-between;
-gap:20px;
+.nav-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.nav-logo img{
-height:62px;
-display:block;
+.nav-logo img {
+  height: 62px;
+  display: block;
 }
 
-.nav-links{
-display:flex;
-align-items:center;
-gap:14px;
-flex-wrap:wrap;
-justify-content:flex-end;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
-.nav-links a{
-display:inline-block;
-padding:10px 18px;
-border-radius:16px;
-font-size:1.05em;
-font-weight:bold;
-text-decoration:none;
-color:white;
-transition:0.2s ease;
+.nav-links a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 16px;
+  font-size: 1.05em;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s ease;
 }
 
-.nav-links a:hover{
-background:rgba(255,255,255,0.15);
+.nav-links a:hover {
+  background: rgba(255,255,255,0.15);
 }
 
-.nav-links a.active{
-background:#67BED9;
-box-shadow:inset 0 0 0 3px rgba(255,255,255,0.45);
+.nav-links a.active {
+  background: #67BED9;
+  box-shadow: inset 0 0 0 3px rgba(255,255,255,0.45); /* OPLOSSING: De omranding op de actieve knop */
 }
 
-/* ================= MOBIEL ================= */
+/* ================= MOBIEL MENU ================= */
 
 @media(max-width:700px){
-
-.nav-inner{
-flex-direction:column;
-gap:10px;
+  .nav-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-logo img {
+    height: 88px;
+  }
+  .nav-links {
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+  .nav-links a {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    font-size: 1.15em;
+    padding: 12px 16px;
+  }
 }
 
-.nav-logo img{
-height:88px;
-}
-
-.nav-links{
-justify-content:center;
-gap:8px;
-width:100%;
-}
-
-.nav-links a{
-width:100%;
-max-width:320px;
-text-align:center;
-font-size:1.15em;
-padding:12px 16px;
-}
-
-}
-
-/* titel */
+/* Titel */
 h1 {
   font-family: 'Anton', sans-serif;
   color: #0179F1;
@@ -161,7 +148,7 @@ ul {
   padding-left: 20px;
 }
 
-/* titel kader */
+/* Titel kader */
 .title-box {
   background: #C9E4FF;
   border: 2px solid #0179F1;
@@ -185,7 +172,7 @@ ul {
   margin: 0;
 }
 
-/* bestelblok */
+/* Bestelblok */
 .highlight {
   display: flex;
   justify-content: center;
@@ -206,7 +193,7 @@ ul {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* knoppen */
+/* Knoppen */
 .button {
   background: #0179F1;
   color: #fff;
@@ -221,7 +208,7 @@ ul {
   background: #015ec7;
 }
 
-/* reviews homepage */
+/* Reviews homepage */
 .reviews-home {
   margin-top: 50px;
   background: #C9E4FF;
@@ -255,128 +242,124 @@ footer {
   font-size: 0.9em;
   color: #666;
   text-align: center;
-  
-/* ================= PODCAST SECTIE ================= */
 }
+
+/* ================= PODCAST SECTIE ================= */
+
 .podcast-section {
   margin-top: 50px;
-  background: #C9E4FF;             /* Lichte blauwe achtergrondkleur */
-  border: 2px solid #0179F1;        /* Blauwe rand */
-  border-radius: 18px;             /* Afgeronde hoeken */
+  background: #C9E4FF;
+  border: 2px solid #0179F1;
+  border-radius: 18px;
   padding: 30px 20px;
-  text-align: center;              /* Centreren van titel, tekst en speler */
+  text-align: center;
 }
 
 .podcast-section h2 {
-font-family: 'Anton', sans-serif;/* Opvallend lettertype zoals bij de videospeler */
-color: #0179F1;                   /* Blauwe titelkleur */
-font-size: 2em;
-margin-top: 0;
-margin-bottom: 15px;
+  font-family: 'Anton', sans-serif;
+  color: #0179F1;
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 .podcast-section p {
-font-size: 1.05em;
-color: #333;
-margin-top: 0;
-margin-bottom: 20px;
-line-height: 1.5;
+  font-size: 1.05em;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 .podcast-player {
-width: 100%;
-max-width: 600px;
-margin: 0 auto;
-display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
 }
 
-.video-section{
-margin-top:50px;
-background:#C9E4FF;
-border:2px solid #0179F1;
-border-radius:18px;
-padding:30px 20px;
-text-align:center;
+/* ================= VIDEO SECTIE ================= */
+
+.video-section {
+  margin-top: 50px;
+  background: #C9E4FF;
+  border: 2px solid #0179F1;
+  border-radius: 18px;
+  padding: 30px 20px;
+  text-align: center;
 }
 
-.video-section h2{
-font-family:'Anton',sans-serif;
-color:#0179F1;
-font-size:2em;
-margin-top:0;
-margin-bottom:25px;
+.video-section h2 {
+  font-family: 'Anton', sans-serif;
+  color: #0179F1;
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
-.video-link{
-display:block;
-position:relative;
-max-width:800px;
-margin:0 auto;
-text-decoration:none;
+.video-link {
+  display: block;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  text-decoration: none;
 }
 
-.video-link img{
-width:100%;
-border-radius:16px;
-display:block;
+.video-link img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
 }
 
 /* DESKTOP knop */
-
-.desktop-play-button{
-position:absolute;
-left:50%;
-top:50%;
-transform:translate(-50%,-50%);
-background:rgba(1,121,241,0.9);
-color:white;
-padding:16px 28px;
-border-radius:14px;
-font-size:1.3em;
-font-weight:bold;
-box-shadow:0 4px 12px rgba(0,0,0,0.25);
-transition:0.2s ease;
+.desktop-play-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(1, 121, 241, 0.9);
+  color: white;
+  padding: 16px 28px;
+  border-radius: 14px;
+  font-size: 1.3em;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: 0.2s ease;
 }
 
-/* subtiele mobiele knop */
-
-.mobile-play-button{
-display:none;
+/* Subtiele mobiele knop */
+.mobile-play-button {
+  display: none;
 }
 
-/* hover desktop */
-
-.video-link:hover .desktop-play-button{
-transform:translate(-50%,-50%) scale(1.05);
+/* Hover desktop */
+.video-link:hover .desktop-play-button {
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 /* MOBIEL */
-
 @media(max-width:600px){
-
-.desktop-play-button{
-display:none;
-}
-
-.mobile-play-button{
-display:flex;
-position:absolute;
-left:50%;
-top:50%;
-transform:translate(-50%,-50%);
-width:58px;
-height:58px;
-border-radius:50%;
-background:rgba(1,121,241,0.55);
-align-items:center;
-justify-content:center;
-font-size:1.6em;
-color:white;
-font-weight:bold;
-backdrop-filter:blur(4px);
-box-shadow:0 4px 10px rgba(0,0,0,0.25);
-}
-
+  .desktop-play-button {
+    display: none;
+  }
+  .mobile-play-button {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgba(1, 121, 241, 0.55);
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+    color: white;
+    font-weight: bold;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  }
 }
 </style>
 </head>
@@ -386,37 +369,27 @@ box-shadow:0 4px 10px rgba(0,0,0,0.25);
 <div class="container">
 
 <nav class="navbar">
-
-<div class="nav-inner">
-
-<div class="nav-logo">
-<a href="index.html">
-<img src="logo-bb.png" alt="Boef & Brommie">
-</a>
-</div>
-
-<div class="nav-links" id="navLinks">
-<a href="index.html">Beginpagina</a>
-<a href="bestellen.html">Bestellen</a>
-<a href="reviews.html">Reviews</a>
-<a href="contact.html">Contact</a>
-</div>
-
-</div>
-
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="logo-bb.png" alt="Boef & Brommie">
+      </a>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <!-- OPLOSSING: class="active" staat hier nu direct hardcoded in de knop -->
+      <a href="index.html" class="active">Beginpagina</a>
+      <a href="bestellen.html">Bestellen</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 </nav>
 
-
 <div class="title-box">
-
-<h1>Boef & Brommie: Slagerij op stelten</h1>
-
-<p class="author">Gijs Lanen</p>
-
-<p class="illustrator">Tekeningen van Ted Lenssen</p>
-
+  <h1>Boef & Brommie: Slagerij op stelten</h1>
+  <p class="author">Gijs Lanen</p>
+  <p class="illustrator">Tekeningen van Ted Lenssen</p>
 </div>
-
 
 <p class="center-text"><strong>Welkom in de wereld van Boef & Brommie!</strong></p>
 
@@ -440,7 +413,7 @@ verandert alles. Dit zaakje lijkt te stinken!
 <p>
 Samen met Brommie duikt Boef in een wervelstorm van gekke ontdekkingen,
 knotsgek gevaar en hilarische plotwendingen.
-Terwijl Sufferingren steeds chaotischer wordt,
+Terwijl Sufferingen steeds chaotischer wordt,
 moet Boef niet één maar twee dingen redden:
 de waarheid én zijn geliefde salami.
 </p>
@@ -458,158 +431,78 @@ Dit boek is zeer geschikt voor kinderen van 7 jaar tot en met 12 jaar (groep 4 t
 </p>
   
 <div class="highlight">
-
-<img src="kaftdef.jpg" alt="Boekcover">
-
-<div>
-
-<p>
-<strong>Hardcover boek</strong><br><br>
-
-<strong>Prijs: €22,95</strong><br><br>
-
-Ophalen: gratis<br>
-
-Verzenden: €5,95
-</p>
-
-<a class="button" href="bestellen.html">Bestel het boek</a>
-
+  <img src="kaftdef.jpg" alt="Boekcover">
+  <div>
+    <p>
+      <strong>Hardcover boek</strong><br><br>
+      <strong>Prijs: €22,95</strong><br><br>
+      Ophalen: gratis<br>
+      Verzenden: €5,95
+    </p>
+    <a class="button" href="bestellen.html">Bestel het boek</a>
+  </div>
 </div>
-
-</div>
-
 
 <div class="reviews-home">
+  <h2>Wat lezers zeggen</h2>
 
-<h2>Wat lezers zeggen</h2>
-
-<div class="review-preview">
-
-<p class="review-meta">
-11 september 2026 - Kind (8) en ouder<br> 
-</p>
-⭐⭐⭐⭐⭐
-</p>
-
-<p class="review-text">
-Door kind geschreven:
-
-Het is een super leuk boek met leuke plaatjes!
-Woordenlijst is fijn. Samen met mama gelezen.
-
-Aanvulling van moeder:
-Wel een beetje een jongensboek. Er komt geen meisje in voor.
-De Salamikevers komen nu nog wel eens voorbij ...
-</p>
-
-</div>  
-  
-<div class="review-preview">
-
-<p class="review-meta">
-30 augustus 2026 - Ouder<br> 
-</p>
-⭐⭐⭐⭐⭐
-</p>
-
-<p class="review-text">
-Wij zijn zó blij met Boef & Brommie! We hebben al heel veel verschillende boeken geprobeerd om onze dochter 9 plezier te laten krijgen in lezen. Deze zomervakantie werd dyslexie bij haar vastgesteld. Dat verklaart natuurlijk ook deels waarom lezen voor haar vaak vooral lastig was.
-Sinds vorige week lezen we samen Boef & Brommie. Na de eerste keer zei ze bij het dichtklappen meteen: “Ik wil verder lezen!” Nu wil ze iedere avond samen lezen. Vanavond stelde ik voor om gezellig in het grote bed een film te kijken, maar ze wilde liever Boef & Brommie lezen! Hopelijk houdt ze dit leesplezier vast als het boek uit is. Maar of een ander boek dan net zo leuk is… En anders lezen we Boef & Brommie gewoon nog een keer!
-</p>
-
-</div>
-  
-<div class="review-preview">
-
-<p class="review-meta">
-9 juli 2026 - Anna van Praag - Schrijfster van jeugdromans<br> 
-</p>
-⭐⭐⭐⭐⭐
-</p>
-
-<p class="review-text">
-Het leukste vond ik dat het schrijfplezier ervan afspat en dat het interactief is en origineel. Ik kan me voorstellen dat kinderen dit graag lezen.
-</p>
-
-</div>
-  
-<a href="reviews.html" class="button">
-
-Lees meer reviews
-
-</a>
-
+  <div class="review-preview">
+    <p class="review-meta">11 september 2026 - Kind (8) en ouder</p>
+    <p>⭐⭐⭐⭐⭐</p>
+    <p class="review-text">
+      Door kind geschreven:<br>
+      Het is een super leuk boek met leuke plaatjes! Woordenlijst is fijn. Samen met mama gelezen.<br><br>
+      Aanvulling van moeder:<br>
+      Wel een beetje een jongensboek. Er komt geen meisje in voor. De Salamikevers komen nu nog wel eens voorbij ...
+    </p>
+  </div>  
+    
+  <div class="review-preview">
+    <p class="review-meta">30 augustus 2026 - Ouder</p>
+    <p>⭐⭐⭐⭐⭐</p>
+    <p class="review-text">
+      Wij zijn zó blij met Boef & Brommie! We hebben al heel veel verschillende boeken geprobeerd om onze dochter 9 plezier te laten krijgen in lezen. Deze zomervakantie werd dyslexie bij haar vastgesteld. Dat verklaart natuurlijk ook deels waarom lezen voor haar vaak vooral lastig was.<br>
+      Sinds vorige week lezen we samen Boef & Brommie. Na de eerste keer zei ze bij het dichtklappen meteen: “Ik wil verder lezen!” Nu wil ze iedere avond samen lezen. Vanavond stelde ik voor om gezellig in het grote bed een film te kijken, maar ze wilde liever Boef & Brommie lezen! Hopelijk houdt ze dit leesplezier vast als het boek uit is. Maar of een ander boek dan net zo leuk is… En anders lezen we Boef & Brommie gewoon nog een keer!
+    </p>
+  </div>
+    
+  <div class="review-preview">
+    <p class="review-meta">9 juli 2026 - Anna van Praag - Schrijfster van jeugdromans</p>
+    <p>⭐⭐⭐⭐⭐</p>
+    <p class="review-text">
+      Het leukste vond ik dat het schrijfplezier ervan afspat en dat het interactief is en origineel. Ik kan me voorstellen dat kinderen dit graag lezen.
+    </p>
+  </div>
+    
+  <a href="reviews.html" class="button">Lees meer reviews</a>
 </div>
 
 <div class="podcast-section">
-
   <h2>Luister naar de Boef & Brommie Podcast!</h2>
-
-  <p>
-    Van verveling tot interactief kinderboek</i>:
-  </p>
-
+  <p>Van verveling tot interactief kinderboek:</p>
   <audio controls class="podcast-player" id="podcastPlayer">
     <source src="podcast1.m4a" type="audio/mp4">
     Je browser ondersteunt dit audio-element niet.
   </audio>
-
 </div>
  
 <div class="video-section">
-
-<h2>Bekijk het interview met Gijs bij Omroep Roermond</h2>
-
-<a 
-href="https://www.youtube.com/watch?v=_MUHt1VXhBc" 
-target="_blank"
-class="video-link">
-
-<img 
-src="https://img.youtube.com/vi/_MUHt1VXhBc/maxresdefault.jpg" 
-alt="Boef & Brommie trailer">
-
-<div class="desktop-play-button">
-▶ Bekijk op YouTube
-</div>
-
-<div class="mobile-play-button">
-▶
-</div>
-
-</a>
-
+  <h2>Bekijk het interview met Gijs bij Omroep Roermond</h2>
+  <a href="https://www.youtube.com/watch?v=_MUHt1VXhBc" target="_blank" class="video-link">
+    <img src="https://img.youtube.com/vi/_MUHt1VXhBc/maxresdefault.jpg" alt="Boef & Brommie trailer">
+    <div class="desktop-play-button">▶ Bekijk op YouTube</div>
+    <div class="mobile-play-button">▶</div>
+  </a>
 </div>
 
 <footer>
-
-<p>© Boef & Brommie – bestelboefenbrommie.nl</p>
-
+  <p>© Boef & Brommie – bestelboefenbrommie.nl</p>
 </footer>
 
 </div>
 
-
 <script>
-
-(function(){
-
-const path = window.location.pathname.split('/').pop() || 'index.html';
-
-document.querySelectorAll('#navLinks a')
-
-.forEach(link => {
-
-if(link.getAttribute('href') === path){
-
-link.classList.add('active');
-
-}
-
-});
-})();
-
+  // Podcast tracking voor Google Analytics
   document.addEventListener('DOMContentLoaded', function() {
     var podcastPlayer = document.getElementById('podcastPlayer');
     var isTracked = false; // Voorkomt dubbele metingen als men tussendoor pauzeert
@@ -626,7 +519,14 @@ link.classList.add('active');
           isTracked = true; // Zorgt dat elke afspeelsessie 1x telt
         }
       });
-  </script>
-  
+
+      // Reset als de podcast helemaal is afgelopen
+      podcastPlayer.addEventListener('ended', function() {
+        isTracked = false;
+      });
+    }
+  });
+</script>
+
 </body>
 </html>

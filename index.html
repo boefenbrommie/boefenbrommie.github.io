@@ -431,34 +431,44 @@ Dit boek is zeer geschikt voor kinderen van 7 jaar tot en met 12 jaar (groep 4 t
 </p>
   
 <!-- Blikvanger / bestelblok -->
-<div class="highlight">
+<div class="highlight" style="flex-direction: column; padding: 35px 25px; gap: 20px;">
   
-  <!-- Kaft als klikbare link met tekst eronder -->
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <a href="voorproefje.pdf" target="_blank">
-      <img src="kaftdef.jpg" alt="Boef & Brommie – boekcover" style="transition: transform 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-    </a>
-    <p style="font-size: 0.9em; color: #0179F1; margin-top: 10px; font-weight: bold; font-family: 'Lobster Two', cursive;">
-      👆 Klik voor preview
-    </p>
-  </div>
+  <h2 style="font-family: 'Anton', sans-serif; color: #0179F1; margin: 0; font-size: 1.8em;">Bestellen</h2>
 
-  <div>
-    <p style="margin-top: 0;"><strong>Hardcover boek</strong></p>
+  <!-- OPLOSSING: align-items: flex-start zorgt dat de bovenkant van tekst en kaft exact gelijk starten -->
+  <div style="display: flex; align-items: flex-start; justify-content: center; gap: 60px; flex-wrap: wrap; width: 100%; margin-top: 10px;">
 
-    <!-- Subtiel blauw kadertje voor Prijs, Verzenden en Ophalen -->
-    <div style="background: #C9E4FF; border: 2px solid #0179F1; border-radius: 12px; padding: 15px 20px; margin: 15px 0; text-align: center;">
-     <span style="font-size: 1.4em; font-weight: bold;">Prijs: €22,95</span><br><br>
-      <p style="margin: 0;">
+    <!-- Linkerkant: Kaft met hover-effect -->
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <!-- display: block en line-height: 0 toegevoegd om onzichtbare witruimte boven de afbeelding te verwijderen -->
+      <a href="voorproefje.pdf" target="_blank" style="display: block; line-height: 0;">
+        <img src="kaftdef.jpg" alt="Boef & Brommie – boekcover" style="width: 180px; border-radius: 8px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      </a>
+      <p style="font-size: 1em; color: #0179F1; margin: 16px 0 0 0; font-weight: bold; font-family: 'Lobster Two', cursive;">
+        👆 Klik voor preview
+      </p>
+    </div>
+
+    <!-- Rechterkant: Strakke typografie met knop op gelijke hoogte als onderkant kaft -->
+    <div style="display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+      <p style="margin: 0 0 5px 0; font-size: 1.1em; color: #333;"><strong>Hardcover boek</strong></p>
+      
+      <p style="margin: 0 0 15px 0; font-size: 1.8em; font-weight: bold; color: #0179F1;">
+        Prijs: €22,95
+      </p>
+      
+      <!-- OPLOSSING: margin-bottom is hier verhoogd naar 45px om de bestelknop exact op gelijke hoogte met de kaft te duwen -->
+      <p style="margin: 0 0 45px 0; font-size: 0.95em; color: #555; line-height: 1.6;">
         📦 Verzenden: €5,95<br>
-        📍Ophalen: gratis<br>
-        <span style="font-size: 0.85em; color: #666; display: block; margin-top: -2px; margin-bottom: 2px;">
+        📍 Ophalen: gratis<br>
+        <span style="font-size: 0.9em;">
           🌍 In <a href="https://maps.google.com/?q=Leunen" target="_blank" style="color: #0179F1; text-decoration: underline;">Leunen</a>
         </span>
       </p>
+          
+      <a class="button" href="bestellen.html" style="margin: 0; padding: 14px 28px; box-shadow: 0 4px 10px rgba(1, 121, 241, 0.25);">Bestel het boek</a>
     </div>
-        
-    <a class="button" href="bestellen.html">Bestel het boek</a>
+
   </div>
 </div>
 

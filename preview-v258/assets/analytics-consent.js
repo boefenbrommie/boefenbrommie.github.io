@@ -17,7 +17,7 @@
     try { localStorage.setItem(KEY, choice); } catch (_) { /* Geen opslag mogelijk: keuze geldt deze pagina. */ }
   }
   function hasProductionHost() {
-    return ALLOWED_HOSTS.indexOf(window.location.hostname.toLowerCase()) !== -1 && /^\/(?:|index\.html|bestellen\.html|reviews\.html|contact\.html|downloads\.html|gastlessen\.html|flaptekst\.html|privacy\.html|bedankt\.html|bedankt-review\.html)$/.test(window.location.pathname);
+    return ALLOWED_HOSTS.indexOf(window.location.hostname.toLowerCase()) !== -1 && /^\/(?:|index\.html|bestellen\.html|reviews\.html|contact\.html|downloads\.html|gastlessen\.html|flaptekst\.html|privacy\.html|bedankt\.html|bedankt-review\.html|bestelvoorwaarden\.html|herroepen\.html)$/.test(window.location.pathname);
   }
   function enableMeasurement() {
     if (tagStarted || !hasProductionHost()) return;

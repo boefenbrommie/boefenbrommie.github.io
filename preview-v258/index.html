@@ -621,6 +621,12 @@
   #bestellen .delivery-options span { display: block; white-space: nowrap; }
 }
 </style>
+<style id="bb-v258-final-delivery">
+@media (min-width:601px){
+  #bestellen .delivery-options{flex-direction:column;flex-wrap:nowrap;align-items:center;gap:7px;text-align:center}
+  #bestellen .delivery-options span{display:block;text-align:center}
+}
+</style>
 </head>
 <body>
 <div class="notice" id="priceNotice">Nu verkrijgbaar: Boef & Brommie voor € 23,95.</div>
@@ -725,6 +731,18 @@
  const closeMenu=()=>{n.classList.remove('open');m.setAttribute('aria-expanded','false');m.textContent='☰ Menu'};
  m.addEventListener('click',()=>{const o=n.classList.toggle('open');m.setAttribute('aria-expanded',String(o));m.textContent=o?'✕ Sluiten':'☰ Menu'});
  n.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+ // Expliciete soepele navigatie binnen de homepage; respecteer de bewegingsvoorkeur.
+ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',event=>{
+   if(event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+   const hash=a.getAttribute('href');
+   if(!hash||hash==='#')return;
+   const target=document.getElementById(hash.slice(1));
+   if(!target)return;
+   event.preventDefault();
+   closeMenu();
+   if(location.hash!==hash)history.pushState(null,'',hash);
+   target.scrollIntoView({block:'start',behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+ }));
  document.addEventListener('keydown',e=>{if(e.key==='Escape' && n.classList.contains('open')){closeMenu();m.focus()}});
  document.addEventListener('click',e=>{if(n.classList.contains('open') && !n.contains(e.target) && !m.contains(e.target))closeMenu()});
  

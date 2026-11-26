@@ -97,7 +97,10 @@ h1 span{color:var(--yellow)}.hero-text p{font-size:1.09rem;line-height:1.65;max-
 .submit-btn{width:100%;font-size:1.1rem;min-height:58px}.submit-btn[disabled]{cursor:not-allowed;opacity:.55;box-shadow:none;transform:none}
 .trust{margin:17px 0 0;text-align:center;color:#5b7084;font-size:.84rem}
 .status{display:none;border-radius:12px;margin-top:16px;padding:13px 15px;border:2px solid #ffbcc6;background:#fff2f3;color:#822b39;font-size:.89rem}
-.status.show{display:block}.demo-note{border-radius:13px;background:#fff6db;color:#624500;padding:12px 15px;font-size:.82rem;border:1px solid #f5d887;margin:18px 0 0;display:none}.demo-note.show{display:block}
+.status.show{display:block}
+#bestelForm .field [aria-invalid="true"],#bestelForm .choice.has-error{border-color:var(--red,#e72b48);box-shadow:0 0 0 1px var(--red,#e72b48)}
+#bestelForm .status.validation-error{font-weight:700;margin-top:16px}
+#bestelForm #formStatus:not(.show){display:none}.demo-note{border-radius:13px;background:#fff6db;color:#624500;padding:12px 15px;font-size:.82rem;border:1px solid #f5d887;margin:18px 0 0;display:none}.demo-note.show{display:block}
 .footer{background:#073d7f;color:white;padding:55px 0 23px}.footer-content{display:grid;grid-template-columns:1.25fr .8fr .8fr;gap:45px}.footer-logo{display:block;max-width:150px;margin-bottom:18px;filter:drop-shadow(0 5px 6px #0003)}.footer h3{font-family:'Anton';font-weight:400;font-size:1.32rem}.footer a{color:white;text-decoration:none;display:block;margin:5px 0}.footer a:hover{text-decoration:underline}.footer-bottom{border-top:1px solid #ffffff35;margin-top:38px;padding-top:18px;text-align:center;font-size:.83rem;color:#d2eaff}
 @media(max-width:1090px){.nav-links{gap:10px;font-size:.7rem}.nav{gap:14px}.order-layout{grid-template-columns:340px minmax(0,1fr);gap:22px}.form-panel{padding:30px 26px}.book-panel{padding:22px}.hero-cover{left:32%}}
 @media(max-width:830px){.nav{min-height:77px}.logo-link{width:130px}.menu-toggle{display:block;margin-left:auto}.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;align-items:stretch;gap:10px;padding:19px 22px 22px;box-shadow:0 18px 28px #0002;font-size:.94rem}.nav-links.open{display:flex}.nav-links a:not(.button){padding:8px 0}.nav-links .button{align-self:flex-start}.hero-inner{grid-template-columns:1.12fr .88fr}.hero-cover{width:177px;left:23%;top:47px}.hero-brommie{width:127px;right:-4px}.burst{width:235px;height:235px;left:10%;top:58px}.order-layout{grid-template-columns:1fr;gap:24px;max-width:660px;margin:auto}.aside{position:static;grid-template-columns:1fr 1fr;align-items:start}.book-panel .book-art{min-height:170px}.book-panel .book-art:before{width:150px;height:150px}.book-panel .book-art img{width:128px}.book-panel h2{font-size:1.5rem}.price{font-size:2.5rem}.main{padding:55px 0 74px}}
@@ -316,7 +319,7 @@ h1 span{color:var(--yellow)}.hero-text p{font-size:1.09rem;line-height:1.65;max-
           <label class="choice"><input type="radio" name="betaalmethode" value="Bank" required><span><strong>Overschrijven via de bank</strong><small>Je ontvangt de betaalgegevens na je bestelling</small></span></label>
         </div><p class="field-note">Betalen gaat in overleg. Wil je (een deel) na ontvangst betalen? Dat kan. <a href="contact.html">Neem vóór je bestelling contact op.</a></p></fieldset>
         <fieldset class="form-step"><legend><span class="num" aria-hidden="true">4</span>Nog iets doorgeven?</legend><div class="field"><label for="opmerkingen">Opmerkingen (optioneel)</label><textarea id="opmerkingen" name="Opmerkingen" placeholder="Bijvoorbeeld een vraag over ophalen of een bijzonder verzoek" maxlength="2000"></textarea></div></fieldset>
-        <div class="form-actions"><p id="shippingQuoteNotice" class="field-note" hidden>Bij verzending van 3 of meer boeken ontvang je eerst een vrijblijvende prijsopgave. <a href="contact.html">Vraag de verzendkosten aan via de contactpagina.</a> Er wordt nog geen bestelling geplaatst.</p><p id="bindingNotice" class="field-note">Bij je bestelling ga je een betalingsverplichting aan. Lees vooraf de <a href="bestelvoorwaarden.html" target="_blank" rel="noopener">bestelvoorwaarden</a>, inclusief de bedenktijd en retourkosten. <a href="herroepen.html#retourgegevens">Contact- en retourgegevens</a>.</p><button type="submit" id="submitButton" class="button submit-btn">Bestellen met betaalverplichting ↗</button><p class="trust">Je betaalt nog niet op deze pagina. Je ontvangt een bevestiging per e-mail en informatie over de betaling en levering.</p><div id="demoNote" class="demo-note" role="note">Dit is een ontwerpvoorbeeld. Je kunt alles invullen en het bestelbedrag berekenen, maar een bestelling verzenden kan pas op de gepubliceerde website.</div><div id="formStatus" class="status" role="alert" aria-live="assertive"></div></div>
+        <div class="form-actions"><p id="shippingQuoteNotice" class="field-note" hidden>Bij verzending van 3 of meer boeken ontvang je eerst een vrijblijvende prijsopgave. <a href="contact.html">Vraag de verzendkosten aan via de contactpagina.</a> Er wordt nog geen bestelling geplaatst.</p><p id="bindingNotice" class="field-note">Bij je bestelling ga je een betalingsverplichting aan. Lees vooraf de <a href="bestelvoorwaarden.html" target="_blank" rel="noopener">bestelvoorwaarden</a>, inclusief de bedenktijd en retourkosten. <a href="herroepen.html#retourgegevens">Contact- en retourgegevens</a>.</p><button type="submit" id="submitButton" class="button submit-btn" disabled>Bestellen met betaalverplichting ↗</button><div id="formStatus" class="status" role="alert" aria-live="assertive"></div><p class="trust">Je betaalt nog niet op deze pagina. Je ontvangt een bevestiging per e-mail en informatie over de betaling en levering.</p><div id="demoNote" class="demo-note" role="note">Dit is een ontwerpvoorbeeld. Je kunt alles invullen en het bestelbedrag berekenen, maar een bestelling verzenden kan pas op de gepubliceerde website.</div></div>
         <input type="text" name="_gotcha" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;opacity:0">
       </form>
       </div>
@@ -385,14 +388,39 @@ h1 span{color:var(--yellow)}.hero-text p{font-size:1.09rem;line-height:1.65;max-
   const btn=document.getElementById('submitButton');
   if(!isLive){document.getElementById('demoNote').classList.add('show');btn.textContent='Voorbeeld – verzenden uitgeschakeld';}
   const form=document.getElementById('bestelForm'),status=document.getElementById('formStatus');
-  function error(message){status.textContent=message;status.classList.add('show');status.scrollIntoView({behavior:'smooth',block:'center'});}
+  function error(message,validation=false){status.textContent=message;status.classList.toggle('validation-error',validation);status.classList.add('show');}
+  let validationAttempted=false;
+  function validateFields(){
+    let valid=true;
+    const fields=[...form.querySelectorAll('input[required],select[required],textarea[required]')];
+    fields.forEach(field=>{
+      const invalid=!field.disabled&&(!field.validity.valid||!field.value.trim());
+      if(invalid){field.setAttribute('aria-invalid','true');valid=false;}
+      else field.removeAttribute('aria-invalid');
+      if(field.type==='radio')field.closest('.choice')?.classList.toggle('has-error',invalid);
+    });
+    return valid;
+  }
+  function refreshValidation(){
+    if(!validationAttempted)return;
+    const valid=validateFields();
+    if(valid&&status.classList.contains('validation-error')){
+      status.classList.remove('show','validation-error');status.textContent='';
+    }
+  }
+  form.addEventListener('input',refreshValidation);
+  form.addEventListener('change',refreshValidation);
   form.addEventListener('submit',async e=>{
-    e.preventDefault();status.classList.remove('show');
-    if(!isLive){error('Dit is een voorbeeld. Er is geen bestelling verstuurd.');return;}
+    e.preventDefault();status.classList.remove('show','validation-error');
     updateSummary();
-    if(!form.reportValidity()){return;}
+    validationAttempted=true;
+    if(!validateFields()){
+      error('Vul alle verplichte velden in en controleer de rood omrande velden.',true);
+      return;
+    }
     if(Number(qtyHidden.value)>=3&&document.querySelector('input[name="Verzendoptie"]:checked')?.value==='Verzenden'){error('Vraag eerst vrijblijvend de verzendkosten aan via de contactpagina.');return;}
     if(!qtyHidden.value||!orderTotal.value){error('Controleer het aantal boeken en kies ophalen of verzenden.');return;}
+    if(!isLive){error('Dit is een voorbeeld. Er is geen bestelling verstuurd.');return;}
     btn.disabled=true;btn.textContent='Bestelling verzenden…';
     try{
       const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
